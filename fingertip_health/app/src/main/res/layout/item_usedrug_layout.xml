@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/gray_border_gray_background"
+
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/bt_username_clear"
+        android:layout_marginRight="5dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@mipmap/remove_red"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+
+            <EditText
+                android:layout_marginLeft="@dimen/dp_5"
+                android:hint="请输入药物名称"
+                android:id="@+id/tv_person_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="left"
+                android:maxLength="20"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/Day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+                <!--<Spinner-->
+                <!--android:scrollbarStyle="outsideOverlay"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/spinner"-->
+
+                <!--/>-->
+                <EditText
+                    android:hint="请输入胰岛素用法"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:id="@+id/drugUsage"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:imeOptions="actionDone"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/daytimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="请选择用药次数"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tip"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="▼"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="每次:"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:hint="请输入单次用量"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/sDrug_EveryTime"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:imeOptions="actionDone"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <EditText
+                    android:hint="请输入胰岛素用量"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:id="@+id/ed_many"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:imeOptions="actionDone"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/line_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        android:text="单位"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tip3"
+
+                        android:text="▼"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/line1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right"-->
+            <!--android:orientation="horizontal">-->
+
+            <!---->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/type"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="30dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="mg"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:drawableRight="@drawable/to_dwon"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="@color/black"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="13sp" />&ndash;&gt;-->
+
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/otherlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/gray_border_gray_background"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

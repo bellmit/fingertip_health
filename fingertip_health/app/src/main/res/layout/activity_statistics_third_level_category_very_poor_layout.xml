@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/statistics_background_color">
+
+    <include
+        layout="@layout/activity_statistics_third_level_category_very_poor_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="特困人员档案统计"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_archive_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_archive_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_archive_health_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="健康情况分类统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_archive_ability_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="自理能力分类统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_archive_age_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="年龄分类统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="资金台账"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_account_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_account_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_account_increase_ratio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="救助资金总支出增长率">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="特困人员供养水平"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_standard_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="特困标准排名统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_standard_average_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="平均补助水平排名统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="特困人员变化情况"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_variance_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_variance_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="特困人员审批情况"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_approve_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_approve_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="致贫原因分类统计"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_poverty_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="致贫原因分类统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="供养机构"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_institution_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_institution_character_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="机构性质分类统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_institution_server_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="管理服务人员分类统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_institution_legal_person_classification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="法人登记分类统计">
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

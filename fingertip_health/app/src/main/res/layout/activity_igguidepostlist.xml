@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <include
+        layout="@layout/activity_policy_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_500"
+            >
+            <TextView
+                android:id="@+id/list_size"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:text="共有3个可能适合您的救助，请点击查看！"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:divider="@null"
+            android:gravity="center_horizontal" />
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

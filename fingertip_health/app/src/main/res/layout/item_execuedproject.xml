@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+  android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="0dip"
+        android:layout_height="82dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_pend_name"
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="老年人基础包"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_15" />
+
+            <TextView
+                android:id="@+id/tv_pend_type"
+                android:layout_width="40dip"
+                android:layout_height="18dip"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_pend_name"
+                android:background="@drawable/textview_style"
+                android:gravity="center"
+                android:text="基础"
+                android:textColor="#fff"
+                android:textSize="@dimen/txt_size_13" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_server_item"
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+
+                android:singleLine="true"
+                android:text="服务项目:肝功能"
+                android:textColor="#919191"
+                android:textSize="@dimen/txt_size_14" />
+
+            <TextView
+                android:id="@+id/tv_execu_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_server_item"
+                android:text="执行单位:乡镇"
+                android:textColor="#919191"
+                android:textSize="@dimen/txt_size_14" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:layout_marginBottom="15dip"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_execued"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#D2D2D2"
+                android:textSize="@dimen/txt_size_13" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+   <!-- <Button
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:id="@+id/btn_execu"
+        android:textSize="@dimen/txt_size_13"
+        android:textColor="?attr/colorPrimary"
+        android:text="***"
+        android:layout_marginRight="12dip"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:background="@drawable/circle_corner_button_selector"
+        />-->
+
+</LinearLayout>

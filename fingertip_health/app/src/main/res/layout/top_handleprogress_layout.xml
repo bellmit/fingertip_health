@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--<ImageView
+                android:layout_width="@dimen/img_width_18dp"
+                android:layout_height="@dimen/img_height_18dp"
+                android:contentDescription=""
+                android:scaleType="fitXY"
+                android:src="@mipmap/arrow_left" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_index_head"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_height_35dp"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_weight="1"
+            android:background="@drawable/black_border_white_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal">
+
+            <ImageView
+                android:layout_width="@dimen/img_width_small"
+                android:layout_height="@dimen/img_height_small"
+                android:scaleType="fitXY"
+                android:src="@mipmap/search_black" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入受理编号或身份证号"
+                android:textColor="#999999"
+                android:textColorHint="@color/datetime_color"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_search_his"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入姓名或身份证号"
+                android:textColor="#999999"
+                android:visibility="gone"
+                android:textColorHint="@color/datetime_color"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/query_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/check_pro" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="@dimen/img_width_small_26"
+            android:layout_height="@dimen/img_width_small_26"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@mipmap/take_photo_white" />
+
+
+        <!-- <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="50dip"
+             android:gravity="center">
+
+             <TextView
+                 android:id="@+id/tv_search_send"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="4dp"
+                 android:layout_marginRight="4dp"
+                 android:gravity="center"
+                 android:paddingBottom="6dp"
+                 android:paddingLeft="5dp"
+                 android:paddingRight="5dp"
+                 android:paddingTop="6dp"
+                 android:text="搜索"
+                 android:textColor="@color/white"
+                 android:textSize="14sp" />
+         </RelativeLayout>-->
+
+    </LinearLayout>
+</LinearLayout>

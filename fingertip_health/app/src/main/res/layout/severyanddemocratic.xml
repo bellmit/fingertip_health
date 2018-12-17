@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="51dp"
+                android:background="@color/transparent"
+                android:divider="@null"
+                android:gravity="center_horizontal" />
+
+            <include
+                android:id="@+id/lay_policy_load_failure"
+                layout="@layout/layout_load_list_result_empty_placeholder_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/recyclerview"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                 android:paddingBottom="55dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/jiahao"
+                app:backgroundTint="@color/colorTheme"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="#33728dff" />
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/addhousehold_btn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:background="@color/separator_color"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="26dp"-->
+                    <!--android:layout_height="26dp"-->
+                    <!--android:src="@mipmap/icon_add_social_station" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/add_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="新增调查"-->
+                    <!--android:textColor="@color/colorTheme"-->
+                    <!--android:textSize="14sp" />-->
+
+            <!--</LinearLayout>-->
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

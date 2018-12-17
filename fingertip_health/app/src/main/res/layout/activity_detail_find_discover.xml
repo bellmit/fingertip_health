@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/srl"
+    >
+
+   <LinearLayout
+       android:background="#f6f8fc"
+
+       android:clipChildren="true"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+    <include
+        android:id="@+id/topPanel"
+        layout="@layout/activity_detail_find_discover_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+       <FrameLayout
+           android:layout_weight="1"
+           android:id="@+id/framelayout"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipChildren="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            style="@style/leba_bg_layout"
+            android:orientation="vertical"
+            android:clipChildren="true">
+            <include
+                layout="@layout/titile_find_baseinfo"
+                 />
+            <include
+                android:id="@+id/lay_his_base"
+                style="@style/leba_bg_bottom_layout"
+                layout="@layout/contentview_find_baseinfo"
+                />
+
+          </LinearLayout>
+
+            <LinearLayout
+                style="@style/leba_bg_layout"
+                android:orientation="vertical"
+                android:clipChildren="true">
+                <include
+                    layout="@layout/titile_find_manage"
+                    />
+                <include
+
+                    android:id="@+id/lay_his"
+                    layout="@layout/content_manage_list"
+                    />
+            </LinearLayout>
+
+
+          <!--  <com.flyco.roundview.RoundTextView
+                android:id="@+id/btn_add_handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/checkbox_height_30dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:paddingLeft="@dimen/padding_18dp"
+                android:paddingRight="@dimen/padding_18dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:text="处理"
+                android:textColor="@android:color/white"
+                app:rv_backgroundColor="@color/colorTheme"
+                app:rv_backgroundPressColor="@color/orangered"
+                app:rv_cornerRadius="6dp" />
+
+-->
+
+            </LinearLayout>
+
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+           </LinearLayout>
+       </FrameLayout>
+
+
+       <RelativeLayout
+           android:gravity="center"
+           android:id="@+id/btn_add_handle"
+           android:background="@color/primary_color"
+           android:layout_width="match_parent"
+           android:layout_height="50dip">
+           <ImageView
+               android:layout_centerInParent="true"
+               android:layout_alignRight="@+id/post"
+               android:layout_marginRight="32dp"
+               android:src="@mipmap/post_white"
+               android:layout_width="25dp"
+               android:layout_height="25dp" />
+           <TextView
+               android:layout_centerInParent="true"
+               android:id="@+id/post"
+               android:text="处理"
+               android:textColor="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </RelativeLayout>
+
+   </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

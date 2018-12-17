@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/dp_6"
+    android:gravity="top"
+    >
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        >
+
+        <com.mixiaoxiao.smoothcompoundbutton.SmoothRadioButton
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/next"
+            android:layout_toRightOf="@+id/choose"
+            android:id="@+id/ll_line"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/list_item_main_text_color"
+                android:textSize="@dimen/txt_size_18"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="left|center"
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/black_alpha_112"
+                android:textSize="@dimen/txt_size_16"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+
+
+        </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+
+                android:id="@+id/next"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/i_next" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

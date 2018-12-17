@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_marginLeft="20dp"
+        android:clipChildren="false">
+
+        <TextView
+            android:id="@+id/tv_pack"
+            android:layout_width="35dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="高血压服务包"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="10dip"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/detsever_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/detserver_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_small" />
+    </RelativeLayout>
+
+
+</LinearLayout>

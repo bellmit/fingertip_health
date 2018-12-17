@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topPanel"
+        layout="@layout/activity_online_consultation_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="负责人:"
+            android:textColor="@color/titile_tex_333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/responsname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入负责人"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:singleLine="true"
+            android:textColor="@color/content_text_666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHomeLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="调查日期:"
+            android:textColor="@color/titile_tex_333" />
+
+        <ImageView
+            android:id="@+id/adddata"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/i_select_date" />
+
+        <TextView
+            android:id="@+id/householddata"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toStartOf="@+id/adddata"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHomeLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="调查结果:"
+            android:textColor="@color/titile_tex_333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/householdresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入调查结果"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:singleLine="true"
+            android:textColor="@color/content_text_666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHomeLine" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="地图定位:"
+            android:textColor="@color/titile_tex_333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mapsite"
+            android:layout_marginLeft="@dimen/img_height_80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:hint="请输入调查结果"
+            android:singleLine="true"
+            android:textColor="@color/content_text_666"
+            android:textSize="14sp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorHomeLine" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="调查文件:"
+            android:textColor="@color/titile_tex_333"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/textsp"
+        android:textColor="@color/titile_tex_333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dp"
+        android:text="调查视频"
+        android:visibility="visible"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclervideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent"
+        android:divider="@null"
+        android:gravity="center_horizontal"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <com.flyco.roundview.RoundTextView
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/btn_zancun"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="@dimen/checkbox_execu_height_20dp"
+            android:layout_marginTop="@dimen/checkbox_execu_height_20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            app:rv_backgroundColor="#067eee"
+            app:rv_cornerRadius="6dp" />
+        <!--<LinearLayout-->
+            <!--android:id="@+id/save_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:background="@color/separator_color"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="@dimen/dp_10"-->
+            <!--android:paddingTop="@dimen/dp_10">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:src="@mipmap/checkbox_pressed" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="保存"-->
+                <!--android:textColor="@color/content_text_666"-->
+                <!--android:textSize="15sp" />-->
+        <!--</LinearLayout>-->
+    </RelativeLayout>
+
+
+</LinearLayout>

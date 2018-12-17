@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/dp_3"
+    android:gravity="top"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        >
+
+        <TextView
+            android:gravity="left|center"
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text=""
+            android:textColor="@color/colorContent"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

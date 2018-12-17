@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <include
+        layout="@layout/activity_policy_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<RelativeLayout-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+
+        <!--&gt;-->
+        <!--<LinearLayout-->
+            <!--android:background="@drawable/textview_round_half_border"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_height="24dp">-->
+        <!--<TextView-->
+            <!--android:id="@+id/bannerTitle"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="民政"-->
+            <!--android:layout_marginRight="@dimen/dp_20"-->
+            <!--android:textSize="@dimen/txt_size_12"-->
+            <!--android:ellipsize="end"/>-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginRight="@dimen/dp_10"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:id="@+id/list_size"-->
+                <!--android:textColor="@color/black_alpha_112"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="共有0个服务项"-->
+                <!--android:textSize="@dimen/txt_size_14"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lay_content"
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

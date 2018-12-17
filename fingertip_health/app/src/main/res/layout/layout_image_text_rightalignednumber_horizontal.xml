@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_14dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/padding_large">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/img_width_normal"
+        android:layout_height="@dimen/img_height_normal"
+        android:scaleType="fitXY" />
+
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_normal" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:text=""
+        android:textColor="@color/intelligent_honour_agreement_remind_number_color"
+        android:textSize="@dimen/txt_size_normal" />
+
+</LinearLayout>

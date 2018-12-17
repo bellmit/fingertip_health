@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <ScrollView
+
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:layout_marginLeft="@dimen/dp6"
+                android:background="@drawable/shape_corner_new"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_top_height">
+                <LinearLayout
+                    android:id="@+id/hbline4"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:background="@color/HblineBlue_500"
+                    android:layout_width="2.5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+                <TextView
+                    android:layout_toRightOf="@+id/hbline4"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/HblineBlue_500"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_gravity="center"
+                    android:text="生活指导方式"
+                    android:textSize="@dimen/hb_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="日吸烟量:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <EditText
+                        android:layout_gravity="center"
+
+                        android:id="@+id/edit_moke1"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="当前吸烟量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <EditText
+                        android:layout_gravity="center"
+
+                        android:id="@+id/edit_smoke2"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="目标吸烟量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="支"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="日饮酒量:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <EditText
+                        android:layout_gravity="center"
+
+                        android:id="@+id/edit_drink1"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="当前饮酒量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <EditText
+                        android:layout_gravity="center"
+
+                        android:id="@+id/edit_drink2"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="目标饮酒量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="两"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="运动:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:id="@+id/edit_port1"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:hint="当前运动周次"
+                                android:imeOptions="actionDone"
+                                android:paddingTop="4dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="/"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <EditText
+                                android:id="@+id/edit_sport2"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:hint="目标运动周次"
+                                android:imeOptions="actionDone"
+                                android:paddingTop="4dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="次/周"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <EditText
+                                android:id="@+id/edit_minute1"
+
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:hint="当前运动分次"
+                                android:imeOptions="actionDone"
+                                android:paddingTop="4dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="/"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <EditText
+                                android:id="@+id/edit_minute2"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:hint="目标运动分次"
+                                android:imeOptions="actionDone"
+                                android:paddingTop="4dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                            <TextView
+                                android:layout_marginLeft="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="次/分"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/hb_text_size" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="主食(克/天):"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="center"
+                        android:id="@+id/id_staple"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="当前主食量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+                    <EditText
+                        android:inputType="numberDecimal"
+
+                        android:layout_gravity="center"
+                        android:id="@+id/id_stapleAim"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="目标主食量"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="6.5dp"
+                android:layout_marginLeft="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="心理调整:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout
+                        android:layout_weight="1"
+                        android:id="@+id/psyadjust"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:is_compulsory="false"
+                        app:is_name_visible="false"
+                        app:is_single_select="true"
+                        app:name_text="信息类别">
+
+                    </com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout>
+
+                    >
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="6.5dp"
+                android:layout_marginLeft="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="遵医行为:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout
+                        android:layout_weight="1"
+                        android:id="@+id/behavior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:is_compulsory="false"
+                        app:is_name_visible="false"
+                        app:is_single_select="true"
+                        app:name_text="信息类别">
+
+                    </com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:layout_marginLeft="@dimen/dp6"
+                android:background="@drawable/shape_corner_new"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_top_height">
+                <LinearLayout
+                    android:id="@+id/hbline1"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:background="@color/HblineBlue_500"
+                    android:layout_width="2.5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+                <TextView
+                    android:layout_toRightOf="@+id/hbline1"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/HblineBlue_500"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_gravity="center"
+                    android:text="辅助检查"
+                    android:textSize="@dimen/hb_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="空腹血糖值:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+
+                    <EditText
+                        android:inputType="numberDecimal"
+
+                        android:layout_gravity="center"
+                        android:id="@+id/fpg"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingBottom="4dp"
+                        android:hint="请输入空腹血糖值"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+                        android:inputType="numberDecimal"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="随机血糖值:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="center"
+                        android:id="@+id/pbg"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingBottom="4dp"
+                        android:hint="请输入随机血糖值"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="糖化血红蛋白:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+
+                    <EditText
+                        android:inputType="numberDecimal"
+
+                        android:layout_gravity="center"
+                        android:id="@+id/accessoryExaminationHba1"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingBottom="4dp"
+                        android:hint="请输入糖化血红蛋白值"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_gray_background"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="检查日期:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/accessoryExaminationDate"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingBottom="4dp"
+                        android:hint="请选择糖化血红蛋白检查日期"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="6.5dp"
+                android:layout_marginLeft="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="药物依从性:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout
+                        android:id="@+id/drugcompliance"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:is_compulsory="false"
+                        app:is_name_visible="false"
+                        app:is_single_select="true"
+                        app:name_text="信息类别">
+
+                    </com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="6.5dp"
+                android:layout_marginLeft="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="药物不良反应:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout
+                        android:id="@+id/drugbad"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:is_compulsory="false"
+                        app:is_name_visible="false"
+                        app:is_single_select="true"
+                        app:name_text="信息类别">
+
+                    </com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout>
+                    <EditText
+                        android:visibility="gone"
+                        android:id="@+id/otherAdverseReaction"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:hint="请输入药物不良反应"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size"  />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginRight="6.5dp"
+                android:layout_marginLeft="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="低血糖反应:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout
+                        android:id="@+id/lowSugarReaction"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:is_compulsory="false"
+                        app:is_name_visible="false"
+                        app:is_single_select="true"
+                        app:name_text="信息类别">
+
+                    </com.jqsoft.fingertip_health.optionlayout.NecessityNameOptionsNewLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dp_50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:id="@+id/line_followtype"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dm_line_height"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginRight="6.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_border_shape_down"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="本次随访分类:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+                    <TextView
+                        android:layout_gravity="center"
+
+                        android:id="@+id/followtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingBottom="4dp"
+                        android:hint="请选择随访分类>"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/hb_text_size" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--<include layout="@layout/hb_life_top_layout" />-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

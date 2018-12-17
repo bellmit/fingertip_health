@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+   <TextView
+       android:layout_marginRight="12dip"
+       android:id="@+id/tv_access_name"
+
+       android:gravity="right"
+       android:textSize="@dimen/txt_size_15"
+       android:text="高血压"
+       android:textColor="#191616"
+    android:layout_width="match_parent"
+    android:layout_height="30dip" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginRight="12dip"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:id="@+id/tv_access_date"
+            android:text="确诊日期:"
+            android:textColor="#818181"
+            android:textSize="@dimen/txt_size_13"
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dip" />
+        <TextView
+            android:layout_marginRight="12dip"
+            android:layout_gravity="right"
+            android:id="@+id/tv_access_unit"
+            android:ellipsize="end"
+           android:singleLine="true"
+
+            android:gravity="right"
+            android:text="确诊医院:"
+            android:textColor="#818181"
+            android:textSize="@dimen/txt_size_13"
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dip" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

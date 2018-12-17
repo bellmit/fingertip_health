@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#EBEBEC"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:contentInsetStart="0.0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageback"-->
+            <!--android:src="@mipmap/search_back"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/dp_3"
+            >
+            <ImageView
+                android:layout_width="@dimen/img_width_18dp"
+                android:layout_height="@dimen/img_height_18dp"
+                android:contentDescription=""
+                android:src="@mipmap/arrow_left"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textAppearance="@style/ToolBar.Title"
+                android:layout_marginLeft="@dimen/dp_3"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:text="服务包解读明细"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_marginTop="10dp"
+        style="@style/leba_bg_layout" >
+
+
+        <LinearLayout
+            style="@style/leba_bg_top_layout"
+            android:id="@+id/ll_top"
+
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_packname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="******"
+                android:textColor="#191616"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_toRightOf="@+id/tv_name"
+                android:id="@+id/tv_base_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="**"
+                android:background="@drawable/textview_style"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nurse"
+            style="@style/leba_bg_bottom_layout"
+            android:orientation="vertical" >
+            <LinearLayout
+
+                style="@style/ll_bg_mid_layout"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/tv_pack_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12dip"
+                    android:text="**************************"
+                    android:textColor="#818181"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                style="@style/ll_bg_mid_layout"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/tv_pack_money"
+                    android:layout_weight="4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip"
+                    android:text="总金额:*****元总金额:*****元总金额:*****元总金额:*****元总金额:*****元"
+                    android:lineSpacingExtra="1dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="#c1c1c1"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:divider="@null"
+        android:id="@+id/lv_service_pack"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"></ListView>
+
+
+
+</LinearLayout>

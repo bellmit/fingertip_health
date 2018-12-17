@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_normal"
+    android:background="@drawable/list_item_background">
+
+    <ImageView
+        android:id="@+id/iv_hospital"
+        android:layout_width="@dimen/img_width_large"
+        android:layout_height="@dimen/img_height_large"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@mipmap/icon"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/tv_hospital_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_normal">
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/darkorange"
+                android:textSize="@dimen/txt_size_normal" />
+            <TextView
+                android:id="@+id/tv_evaluation_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/margin_small"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="@dimen/txt_size_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

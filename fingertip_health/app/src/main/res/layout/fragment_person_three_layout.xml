@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:id="@+id/topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_top_height"
+                android:layout_marginLeft="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:layout_marginTop="@dimen/dp6"
+                android:background="@drawable/shape_corner_new"
+                >
+
+                <LinearLayout
+                    android:id="@+id/hbline4"
+                    android:layout_width="2.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/HblineBlue_500"
+                    android:orientation="horizontal"
+                    ></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/hbline4"
+                    android:text="生活环境"
+                    android:textColor="@color/HblineBlue_500"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_paifeng"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="3"
+                    android:gravity="left|center_vertical"
+                    android:text="厨房排风设施:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_paifeng"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:layout_weight="7.5"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择(单选) >"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ranliao"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="燃料类型:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_ranliao"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择(多选) >"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_yinshui"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="饮水:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_yinshui"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择(多选) >"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_cesuo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="厕所:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cesuo"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择(单选) >"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qincu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="禽畜栏:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_qincu"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择(单选) >"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_top_height"
+                android:layout_marginLeft="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:layout_marginTop="@dimen/dp6"
+                android:background="@drawable/shape_corner_new"
+                >
+
+                <LinearLayout
+                    android:id="@+id/hbline5"
+                    android:layout_width="2.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/HblineBlue_500"
+                    android:orientation="horizontal"
+                    ></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/hbline5"
+                    android:text="封面信息"
+                    android:textColor="@color/HblineBlue_500"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <!--户籍地址-->
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:id="@+id/ll_household_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+
+         android:visibility="invisible"                   android:id="@+id/iv_necessity_household_address"
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+
+                            />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="户籍地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/hb_text_size"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_province"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_province"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_city"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_city"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+                            android:visibility="invisible"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="户籍地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/txt_size_archive"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_county"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_county"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_county"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_street"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_street"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_street"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+                            android:visibility="invisible"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="户籍地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/txt_size_archive"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_village"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_village"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_village"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_household_address_input_zu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_household_address_input_zu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_household_address_trailing_icon_zu"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--家庭地址-->
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp6"
+                android:layout_marginRight="@dimen/dp6"
+                android:id="@+id/ll_home_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <TextView
+
+             android:visibility="visible"               android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="*"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/hb_text_size"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="居住地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/hb_text_size"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_province"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_province"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_city"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_city"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+                            android:visibility="invisible"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="家庭地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/txt_size_archive"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_county"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_county"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_county"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_street"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_street"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_street"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+                            android:visibility="invisible"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_new_width"
+                            android:text="家庭地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/txt_size_archive"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_village"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_village"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_village"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_address_input_zu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_home_address_input_zu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                android:textColor="@color/archive_title_color"
+                                android:textSize="@dimen/hb_text_size"
+                                />
+
+                            <ImageView
+                                android:id="@+id/iv_home_address_trailing_icon_zu"
+                                android:layout_width="@dimen/img_trailing_icon_width"
+                                android:layout_height="@dimen/img_trailing_icon_height"
+                                android:layout_marginLeft="@dimen/dp_6"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_down"
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1px"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/archive_input_underline_color"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/img_width_necessity"
+                            android:layout_height="@dimen/img_height_necessity"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_star_outline"
+                            android:visibility="invisible"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_6"
+                            android:minWidth="@dimen/necessity_name_input_min_width"
+                            android:text="家庭地址"
+                            android:textColor="@color/archive_title_color"
+                            android:textSize="@dimen/txt_size_archive"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="建档日期:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入建档日期"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_line_height"
+                android:layout_marginLeft="6.5dp"
+                android:layout_marginRight="6.5dp"
+                android:background="@drawable/gray_border_gray_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="建档医生:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+                <TextView
+                    android:layout_marginRight="@dimen/dp_right"
+                    android:id="@+id/et_docname"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入建档医生"
+                    android:imeOptions="actionDone"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/hb_text_size"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:layout_marginBottom="20dip"
+                android:id="@+id/gxy_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingRight="@dimen/corner_radius_40dp"
+                android:paddingLeft="@dimen/corner_radius_40dp"
+                android:background="@color/colorTheme"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_preservation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_20" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>
+

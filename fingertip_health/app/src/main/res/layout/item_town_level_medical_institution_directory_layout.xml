@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#EBEBEC"
+    >
+
+    <RelativeLayout
+        android:id="@+id/ll_first"
+        style="@style/leba_bg_layout" >
+
+        <LinearLayout
+            android:id="@+id/ll_data"
+            style="@style/leba_bg_all_layout"
+            android:layout_below="@+id/view_top"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                    android:id="@+id/tv_medical_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip"
+                    android:text=""
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/txt_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_medical_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:text=""
+                android:textColor="#191616"
+                android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_medical_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12.0dip"
+                    android:text=""
+                    android:textColor="#818181"
+                    android:textSize="14.0sp" />
+        </LinearLayout>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_phone"
+            android:layout_width="@dimen/img_width_large"
+            android:layout_height="@dimen/img_height_large"
+            android:src="@mipmap/i_assess_dial">
+        </ImageView>
+
+    </RelativeLayout>
+
+    </LinearLayout>

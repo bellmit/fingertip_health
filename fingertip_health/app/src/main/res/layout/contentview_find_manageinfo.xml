@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_managectx"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="处理人"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_managepeople"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="动作"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_manage_mode"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="备注"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_manage_remark"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="处理时间"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_manage_time"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_6"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/block_background_color_with_block_round_corner"
+        android:padding="@dimen/dp_2"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.sevenheaven.segmentcontrol.SegmentControl
+            android:id="@+id/sc_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textSize="@dimen/txt_size_normal"
+            app:boundWidth="@dimen/dp_1"
+            app:cornerRadius="@dimen/dp_5"
+            app:horizonGap="@dimen/dp_10"
+            app:normalColor="@color/colorWhite"
+            app:selectedColor="@color/colorTheme"
+            app:separatorWidth="@dimen/dp_1"
+            app:texts="月"
+            app:verticalGap="@dimen/dp_4" />
+        <!--app:textColors="@color/text_colors"-->
+        <!--app:backgroundColors="@color/background_color"-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:scaleType="fitXY"
+            android:src="@mipmap/g_date" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/txt_size_normal"
+            android:layout_marginLeft="@dimen/dp_6"/>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--</LinearLayout>-->
+
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/bt_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_theme_background_corner_radius"
+            android:paddingBottom="@dimen/dp_1"
+            android:paddingLeft="@dimen/dp_2"
+            android:paddingRight="@dimen/dp_2"
+            android:paddingTop="@dimen/dp_1"
+            android:text="@string/query"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_normal"
+            app:gTouchColor="@color/colorTheme"
+            app:gTouchCornerRadius="@dimen/corner_radius_4px"
+            app:gTouchDurationRate="0.7"
+            app:gTouchEffect="auto"
+            android:visibility="gone"/>
+
+        <!--<Button-->
+        <!--android:id="@+id/bt_query"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/color_theme_background_corner_radius"-->
+        <!--android:text="@string/query"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/txt_size_normal" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_subsistence_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="户籍类别:"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_subsistence_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/white_background_with_3dp_color_theme_round_corner"
+                android:text=""
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_support_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="供养类型:"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_support_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/white_background_with_3dp_color_theme_round_corner"
+                android:text=""
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_result_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计范围:"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_result_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/white_background_with_3dp_color_theme_round_corner"
+                android:text=""
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/txt_size_normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:background="@drawable/block_background_color_with_block_round_corner"
+        >
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+        <LinearLayout
+            android:id="@+id/lay_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_serial_number"
+                    android:layout_width="@dimen/statistics_serial_number_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="序号"
+                    android:textAppearance="@style/TextAppearanceGray"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    />
+                <View
+                    android:layout_width="@dimen/line_1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/separator_color"/>
+
+                <TextView
+                    android:id="@+id/tv_district_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="center"
+                    android:text="辖区"
+                    android:textAppearance="@style/TextAppearanceGray"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    />
+                <View
+                    android:layout_width="@dimen/line_1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/separator_color"/>
+                <TextView
+                    android:id="@+id/tv_new"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="新增数量(人)"
+                    android:textAppearance="@style/TextAppearanceGray" />
+                <View
+                    android:layout_width="@dimen/line_1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/separator_color"/>
+
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="复查数量(人)"
+                    android:textAppearance="@style/TextAppearanceGray" />
+                <View
+                    android:layout_width="@dimen/line_1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/separator_color"/>
+
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="注销数量(人)"
+                    android:textAppearance="@style/TextAppearanceGray" />
+            </LinearLayout>
+            <include
+                layout="@layout/layout_recyclerview_without_srl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/hbc_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+            <include layout="@layout/layout_chart_large_value_hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/lay_subsistence_variance_ranking_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_statistics_chart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/iv_statistics_chart"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:scaleType="fitXY"
+                android:src="@mipmap/g_statistics_chart_n" />
+
+            <TextView
+                android:id="@+id/tv_statistics_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@string/statistics_chart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/txt_size_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_statistics_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_statistics_list"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:scaleType="fitXY"
+                android:src="@mipmap/g_statistics_list_n" />
+
+            <TextView
+                android:id="@+id/tv_statistics_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="@string/statistics_list"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/txt_size_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    tools:context="com.jqsoft.fingertip_health.di.ui.onlinesignfragment.CPartyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/cpartlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/add_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:background="@drawable/leba_bg_single_unselected"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addseverpake_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/add_qianyuebtn_bg"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="@dimen/margin_10dp"
+                        android:paddingRight="@dimen/margin_10dp"
+                        android:text="新增签约服务包"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lay_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_layout"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:background="@drawable/leba_bg_single_unselected"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mygrideview"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/addseverpake_btn"
+                        android:layout_marginTop="15dp"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/ll_bg_mid_layout"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="4"
+                                android:text="应收金额总计"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yingshou"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="6"
+                                android:gravity="right"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yuan01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="元"
+                                android:textColor="#818181"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+                            style="@style/ll_bg_mid_layout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="4"
+                                android:text="实收金额总计"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/shishou"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="6"
+                                android:gravity="right"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yuan02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="元"
+                                android:textColor="#818181"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+
+                            style="@style/ll_bg_mid_layout"
+
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="4"
+                                android:text="减免金额总计"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/jianmian"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="6"
+                                android:gravity="right"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yuan03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="元"
+                                android:visibility="gone"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+
+                            style="@style/ll_bg_mid_layout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="6"
+                                android:text="医保补偿金额总计"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yibaochuchang"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yuan04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="元"
+                                android:visibility="gone"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+
+                            style="@style/ll_bg_mid_layout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="4"
+                                android:text="自付金额总计"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/heji"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="6"
+                                android:gravity="right"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/yuan05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="元"
+                                android:visibility="gone"
+                                android:textColor="#818181"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#eeeeee" />
+
+                        <LinearLayout
+
+                            style="@style/ll_bg_mid_layout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12.0dip"
+                                android:layout_weight="4"
+                                android:text="缴费状态"
+                                android:textColor="#74CDBD"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dip"
+                                android:layout_marginRight="12dip"
+                                android:layout_weight="6"
+                                android:gravity="right"
+                                android:orientation="vertical"
+                                android:textColor="#818181"
+                                android:textSize="14sp">
+
+                                <TextView
+                                    android:id="@+id/shouweistate"
+                                    android:layout_width="80dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="12dip"
+                                    android:layout_marginRight="2dip"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="4"
+                                    android:gravity="right" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/submit_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/checkbox_height_30dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_10dp"
+                    android:paddingLeft="@dimen/padding_18dp"
+                    android:paddingRight="@dimen/padding_18dp"
+                    android:paddingTop="@dimen/padding_10dp"
+                    android:text="@string/button_title_qianyue"
+                    android:textColor="@android:color/white"
+                    app:rv_backgroundColor="@color/colorTheme"
+                    app:rv_backgroundPressColor="@color/orangered"
+                    app:rv_cornerRadius="6dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

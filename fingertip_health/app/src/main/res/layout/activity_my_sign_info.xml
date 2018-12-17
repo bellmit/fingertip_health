@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_my_sign_info_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_sign_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/annual_sign_info_overview_height">
+
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                               />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <android.support.v4.view.ViewPager
+                                    android:id="@+id/vp_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+
+                                </android.support.v4.view.ViewPager>
+
+                                <com.jqsoft.fingertip_health.view.PagePointView
+                                    android:id="@+id/point"
+                                    android:layout_width="@dimen/chart_point_view_width"
+                                    android:layout_height="@dimen/page_point_view_height"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/dp_0"
+                                    app:ppv_borderWidth="1dp"
+                                    app:ppv_focusPointColor="@color/red"
+                                    app:ppv_hasBorder="true"
+                                    app:ppv_pointRadius="@dimen/dp4"
+                                    app:ppv_unfocusPointColor="@android:color/white" />
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+
+                        <include
+                            android:id="@+id/lith_my_sign_number"
+                            layout="@layout/layout_image_text_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+
+                    <include
+                        android:id="@+id/lay_sign_info_overview_load_failure"
+                        layout="@layout/layout_load_failure_placeholder_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_star_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_normal">
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1px"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_normal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minHeight="@dimen/donut_division_percentage_view_min_height"
+                        android:orientation="vertical">
+
+                        <com.jqsoft.fingertip_health.view.DonutDivisionPercentageView
+                            android:id="@+id/ddpv_package"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/donut_division_percentage_view_min_height"
+                            app:donut_division_backgroundColor="@android:color/transparent"
+                            app:donut_division_backgroundDonutColor="@color/white"
+                            app:donut_division_hint="@string/hint_total_paid_package"
+                            app:donut_division_hint_text_size="@dimen/txt_size_normal"
+                            app:donut_division_text_color="@color/black"
+                            app:donut_division_value=""
+                            app:donut_division_value_text_size="@dimen/txt_size_normal"
+                            app:donut_division_width="@dimen/dp_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_package_number_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginLeft="@dimen/dp_30"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:minHeight="@dimen/donut_division_percentage_view_min_height"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/lay_sign_info_overview_load_failure"
+            layout="@layout/layout_load_failure_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

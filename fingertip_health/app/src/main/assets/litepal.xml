@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="gdws" />
+    <version value="2" />
+
+    <list>
+
+        <!--<mapping class="com.jqsoft.fingertip_health.bean.resident.SRCLoginAreaBean" />-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SRCLoginDataDictionaryBean" />-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SRCLoginSalvationBean" />-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SettingServerBean" />-->
+        <!--<mapping class="com.jqsoft.fingertip_health.bean.OrganizationBean" />-->
+        <mapping class="com.jqsoft.fingertip_health.bean.GDWS_ICD" />
+
+        <mapping class="com.jqsoft.fingertip_health.bean.fingertip.gdws_sys_area" />
+        <mapping class="com.jqsoft.fingertip_health.bean.fingertip.gdws_ph_dict_item" />
+
+        <!--<mapping class="com.jqsoft.fingertip_health.bean.fingertip.SettingServerBean" />-->
+
+    </list>
+
+    <!--<dbname value="DBPeopleBaseInfo"></dbname>-->
+
+    <!--<version value="3"></version>-->
+
+    <!--<list>-->
+
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.resident.gdws_sys_area"></mapping>-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SRCLoginDataDictionaryBean"></mapping>-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SRCLoginSalvationBean"></mapping>-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.grassroots_civil_administration.SettingServerBean"></mapping>-->
+        <!--<mapping-->
+            <!--class="com.jqsoft.fingertip_health.bean.OrganizationBean"></mapping>-->
+
+
+    <!--</list>-->
+</litepal>

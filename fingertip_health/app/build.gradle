@@ -1,0 +1,793 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+//apply plugin: 'me.tatarka.retrolambda'
+
+repositories {
+    maven {
+        repositories {
+            url 'https://oss.sonatype.org/content/repositories/releases/'
+        }
+    }
+}
+
+//andresguard
+apply plugin: 'AndResGuard'
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.3'
+    }
+}
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // it will keep the origin path of your resources when it's true
+    keepRoot = false
+    whiteList = [
+            // your icon
+            "R.mipmap.r_app_icon"
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.3'
+    }
+}
+//andresguard end
+
+
+bugly {
+    appId = ""
+    appKey = ""
+    debug = false
+    execute = false        //	boolean	true	插件开关
+    upload = false         //boolean	true	上传开关
+    uploadMapping = false   //	boolean	true	Mapping文件上传开关
+    uploadSymbol = false     //	boolean	true	Symbol文件上传开关
+}
+//bugly {
+//    appId = "ca50ce3b12"
+//    appKey = "e2d77bc9-460a-446a-9739-65decd38538c"
+//    debug = false
+//}
+
+
+def releaseTime() {
+    return new Date().format("yyyy.MM.dd_HH_mm_ss", TimeZone.getTimeZone("GMT+8"))
+}
+
+def appName = "指尖健康"
+def appType = ""
+def genius_version = "2.0.0"
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+    buildToolsVersion rootProject.ext.buildTools
+
+
+    defaultConfig {
+        applicationId "com.jqsoft.fingertip_health"
+        minSdkVersion rootProject.ext.minSdk//也可以支持16级以上的不过页面跳转效果就没有了，透明状态栏也没有。
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //buildConfigField "String", "TINKER_ID", "\"${getTinkerIdValue()}\""
+        multiDexEnabled true
+
+        resConfigs "zh"
+
+        ndk {
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+//            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+//            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64'
+//            abiFilters 'armeabi', 'x86', 'x86_64'
+            abiFilters 'armeabi'
+        }
+
+//        //极光推送
+//        manifestPlaceholders = [
+//                JPUSH_PKGNAME: applicationId,
+//                JPUSH_APPKEY : "1929be09bbcec76a970d91b1", //JPush上注册的包名对应的appkey.
+//                JPUSH_CHANNEL: "SIGNED_DOCTOR_CLIENT", //用户渠道统计的渠道名称
+//        ]
+    }
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res']
+            java.srcDirs = ['src/main/java']
+        }
+//        gd_foshan {
+//            jniLibs.srcDirs = ['libs']
+//            res.srcDirs = ['src/gd_foshan/res']
+//            java.srcDirs = ['src/gd_foshan/java']
+//        }
+    }
+    signingConfigs {
+        //y
+//        release {
+//            keyAlias 'android_key'
+//            keyPassword '12345678'
+//            storeFile file('C:/Users/Mars/Desktop/android_signature_keystore.jks')
+//            storePassword '12345678'
+//        }
+//        debug {
+//            keyAlias 'androiddebugkey'
+//            keyPassword 'android'
+//            storeFile file('C:/Users/Mars/Desktop/debug.keystore')
+//            storePassword 'android'
+//        }
+        //chenxu
+//        release {
+//            keyAlias 'android_key'
+//            keyPassword '12345678'
+//            storeFile file('E:/work/keystore/android_signature_keystore.jks')
+//            storePassword '12345678'
+//        }
+//        debug {
+//            keyAlias 'androiddebugkey'
+//            keyPassword 'android'
+//            storeFile file('C:/Users/Administrator/.android/debug.keystore')
+//            storePassword 'android'
+//        }
+        //lxj
+//
+        release {
+            keyAlias 'android_key'
+            keyPassword '12345678'
+            storeFile file('D:/JQproject/releasekey/android_signature_keystore.jks')
+            storePassword '12345678'
+        }
+        debug {
+            keyAlias 'android_key'
+            keyPassword '12345678'
+            storeFile file('D:/JQproject/releasekey/android_signature_keystore.jks')
+            storePassword '12345678'
+        }
+
+//        //zyz
+//        release {
+//            keyAlias 'android_key'
+//            keyPassword  '123456'
+//            storeFile file('E:/apk/mykey.jks')
+//            storePassword '123456'
+//        }
+//        debug {
+//            keyAlias 'androiddebugkey'
+//            keyPassword 'android'
+//            storeFile file('C:/Users/YLL/.android/debug.keystore')
+//            storePassword 'android'
+//
+//        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+
+//            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            proguardFiles 'proguard-android.txt', 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+
+        }
+    }
+    applicationVariants.all { variant ->
+        def buglyAppId = null;
+        def buglyAppKey = null;
+        def countyName = '';
+        if (variant.flavorName.equals("generic")) { // 渠道1：channel1
+            buglyAppId = 'a9bdf25126'
+            buglyAppKey = '48edda0a-8530-4efd-afd2-49c7a6266fb5'
+            countyName = ''
+        } else if (variant.flavorName.equals("gd_foshan")) { // 渠道1：channel1
+            buglyAppId = '0eaf87bc60'
+            buglyAppKey = '14dca8d6-17c9-4da6-956e-f6f90fbb7f7c'
+            countyName = '广东佛山救助'
+        }else if (variant.flavorName.equals("xc_xuanzhou")) { // 渠道1：channel1
+            buglyAppId = '1b39690886'
+            buglyAppKey = '23688bbf-11cc-493f-b953-455512a86b63'
+            countyName = ''
+        }
+        if (buglyAppId != null) {
+            variant.ext.buglyAppId = buglyAppId
+        }
+        if (buglyAppKey != null) {
+            variant.ext.buglyAppKey = buglyAppKey
+        }
+
+//        if (variant.buildType.name.equals('release')){
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // 输出apk名称为appname-1.0-beta1-xxxx-xx-xx.apk
+                def fileName = "${appName}${countyName}V${variant.versionName}.apk"
+//                    def fileName = "${appName}${appType}${countyName}V${variant.versionName}.apk"
+//                            def fileName = "${appName}-${variant.flavorName}-v${variant.versionName}-versioncode-${variant.versionCode}-${releaseTime()}.apk"
+//                            def fileName = "${appName}-${variant.flavorName}-v${defaultConfig.versionName}-versioncode-${defaultConfig.versionCode}-${releaseTime()}.apk"
+//                            def fileName = "${appName}-${variant.productFlavors[0].name}-v${defaultConfig.versionName}-versioncode-${defaultConfig.versionCode}-${releaseTime()}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+
+//        }
+    }
+
+// -------------------------------------------------------------------------------
+//   发布新地区应用程序时需配置上方的countyName值与下方的productFlavor中的值
+// -------------------------------------------------------------------------------
+    productFlavors {
+        generic {
+            applicationId = "com.jqsoft.fingertip_health"
+            versionCode = 15
+            versionName = "1.0.15.181119"
+            resValue "string", "app_name", "指尖健康"
+            resValue "string", "login_page_app_name", "指尖健康"
+            resValue "string", "index_page_title", "指尖健康"
+
+
+            manifestPlaceholders = [
+//                    http://192.168.88.46:8087/gdws-core/interface/entryhttp://192.168.88.46:8087/gdws-core/interface/entry
+                    //测试地址
+//                      HTTP_ACCESS_URL_VALUE     :"http://192.168.88.52:8085/",
+//                      HTTP_ACCESS_URL_VALUE     :"http://192.168.88.46:8087/",
+//                                                    http://192.168.88.46:8086/gdws
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.88.46:8087/gdws-core/",
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.88.46:8086/",
+
+
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.88.52:8085/",
+                    //正式地址
+//                    HTTP_ACCESS_URL_VALUE          : "http://42.123.97.19:8086/gdws-core/",
+                    //测试地址
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.88.191:8080/core/",
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.88.220:8081/gdws-core/",
+HTTP_ACCESS_URL_VALUE          : "http://192.168.88.52:8070/core/",
+                    //柯炎
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.88.141:8087/",
+                    //夏南南
+//                                   HTTP_ACCESS_URL_VALUE          : "http://192.168.1.142:8070/core/",
+                    //测试地址
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.246:8091/",
+                    //柯炎服务器
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.88.141:8087/",
+                    //               HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:9092/fdss-api/",
+                    //徐李春本机
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.14:8080/sri/",
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.44.134:8080/sri/",
+// HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:8060/sri/",
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.44.71:8080/sri/",
+//HTTP_ACCESS_URL_VALUE          : "http://192.168.44.230:8080/sri/",
+//HTTP_ACCESS_URL_VALUE          : "http://www.jqsoft.net:6072/sri/",
+// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.51:8080/sri/",
+///HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.83:8080/sri/",
+                    //   HTTP_ACCESS_URL_VALUE          : "http://192.168.44.14:8080/sri/",
+                    //正式的省厅服务器地址
+//                    HTTP_ACCESS_URL_VALUE          : "http://60.166.63.148:8009/sri/",
+                    //宣城市服务器地址
+                //    HTTP_ACCESS_URL_VALUE          : "http://60.173.111.68:8009/sri/",
+                    // HTTP_ACCESS_URL_VALUE          : "http://60.166.63.148:9201/fdss-api/",
+                    // HTTP_ACCESS_URL_VALUE          : "http://192.168.44.47:8080/fdss-api/",
+//                HTTP_ACCESS_URL_VALUE          : "http://192.168.88.36:8080/fdss-api/",
+                    HTTP_UPLOAD_VIDEO_URL_VALUE    : "app/VideoUploadService",
+//        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/VideoUploadService",
+//        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/uploadService!fileupload.do",
+                    FILE_PROVIDER_AUTHORITIES_VALUE: "com.jqsoft.fingertip_health.fileProvider",
+                    LOGIN_APP_NAME_VALUE           : "指尖健康",
+//                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+                    BUGLY_APP_ID_VALUE             : "Ba9bdf25126",
+//                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+//,
+                    JPUSH_PKGNAME                  : applicationId,
+                    JPUSH_APPKEY                   : "39585a6c1018966df8512701", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL                  : "generic" //用户渠道统计的渠道名称
+            ]
+        }
+
+         //宣城宣州区
+//        xc_xuanzhou {
+//            applicationId = "com.jqsoft.fingertip_health"
+//            versionCode = 2
+//            versionName = "1.0.1.180823"
+//            resValue "string", "app_name", "社会救助"
+//            resValue "string", "login_page_app_name", "社会救助"
+//            resValue "string", "index_page_title", "社会救助工作平台"
+//
+//
+//            manifestPlaceholders = [
+//                    //               HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:9092/fdss-api/",
+////                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.226:9092/fdss-api/",
+//// HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:8060/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.44.71:8080/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.44.230:8080/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://www.jqsoft.net:6072/sri/",
+//// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.51:8080/sri/",
+//////HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+//// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.83:8080/sri/",
+//                    //   HTTP_ACCESS_URL_VALUE          : "http://192.168.44.14:8080/sri/",
+//                    //正式的省厅服务器地址
+//                    //徐李春本机
+//                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.14:8080/sri/",
+////                             HTTP_ACCESS_URL_VALUE          : "http://60.166.63.148:8009/sri/",
+//                    //宣城市服务器地址
+////                    HTTP_ACCESS_URL_VALUE          : "http://60.173.111.68:8009/sri/",
+////                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.134:8080/sri/",
+////                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.103:8080/sri/",
+////                    HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+//                    // HTTP_ACCESS_URL_VALUE          : "http://60.166.63.148:9201/fdss-api/",
+//                    // HTTP_ACCESS_URL_VALUE          : "http://192.168.44.47:8080/fdss-api/",
+////                HTTP_ACCESS_URL_VALUE          : "http://192.168.88.36:8080/fdss-api/",
+//                    HTTP_UPLOAD_VIDEO_URL_VALUE    : "app/VideoUploadService",
+////        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/VideoUploadService",
+////        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/uploadService!fileupload.do",
+//                    FILE_PROVIDER_AUTHORITIES_VALUE: "com.jqsoft.fingertip_health.fileProvider",
+//                    LOGIN_APP_NAME_VALUE           : "社会救助工作平台",
+////                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+//                    BUGLY_APP_ID_VALUE             : "B1b39690886",
+////                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+////,
+//                    JPUSH_PKGNAME                  : applicationId,
+//                    JPUSH_APPKEY                   : "9dd0c0caa1300280602ecb2a", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL                  : "xc_xuanzhou" //用户渠道统计的渠道名称
+//            ]
+//        }
+
+        //广东佛山
+//        gd_foshan {
+//            applicationId = "com.jqsoft.fingertip_health"
+//            versionCode = 1
+//            versionName = "1.0.0.180514.beta"
+//            resValue "string", "app_name", "广东佛山救助"
+//            resValue "string", "login_page_app_name", "广东佛山救助"
+//            resValue "string", "index_page_title", "广东佛山救助工作平台"
+//
+//            manifestPlaceholders = [
+//        //               HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:9092/fdss-api/",
+////                    HTTP_ACCESS_URL_VALUE          : "http://192.168.44.226:9092/fdss-api/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.44.134:8080/sri/",
+//// HTTP_ACCESS_URL_VALUE          : "http://60.173.247.168:8060/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.44.71:8080/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://192.168.44.230:8080/sri/",
+////HTTP_ACCESS_URL_VALUE          : "http://www.jqsoft.net:6072/sri/",
+//// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.51:8080/sri/",
+/////HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+//////HTTP_ACCESS_URL_VALUE          : "http://192.168.45.53:8080/sri/",
+//// HTTP_ACCESS_URL_VALUE          : "http://192.168.44.83:8080/sri/",
+//     //   HTTP_ACCESS_URL_VALUE          : "http://192.168.44.14:8080/sri/",
+//        HTTP_ACCESS_URL_VALUE          : "http://19.130.228.171:8090/sri/",
+// // HTTP_ACCESS_URL_VALUE          : "http://60.166.63.148:9201/fdss-api/",
+// // HTTP_ACCESS_URL_VALUE          : "http://192.168.44.47:8080/fdss-api/",
+////                HTTP_ACCESS_URL_VALUE          : "http://192.168.88.36:8080/fdss-api/",
+//        HTTP_UPLOAD_VIDEO_URL_VALUE:"app/VideoUploadService",
+////        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/VideoUploadService",
+////        HTTP_UPLOAD_VIDEO_URL_VALUE:"http://192.168.45.53:8080/sri/app/uploadService!fileupload.do",
+//FILE_PROVIDER_AUTHORITIES_VALUE: "com.jqsoft.fingertip_health.fileProvider",
+//LOGIN_APP_NAME_VALUE           : "广东佛山救助工作平台",
+////                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+//BUGLY_APP_ID_VALUE             : "B0eaf87bc60",
+////                    BUGLY_APP_ID_VALUE值的格式为B+{真实的id}------------------
+////,
+//JPUSH_PKGNAME                  : applicationId,
+//JPUSH_APPKEY                   : "9dd0c0caa1300280602ecb2a", //JPush上注册的包名对应的appkey.
+//JPUSH_CHANNEL                  : "gd_foshan" //用户渠道统计的渠道名称
+//            ]
+//        }
+
+    }
+    productFlavors.all {
+//        flavor -> flavor.manifestPlaceholders = [MTA_CHANNEL_VALUE: name]
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //    compile fileTree(include: ['*.jar'], dir: 'src/main/jniLibs')
+
+    //support library
+    compile "com.android.support:appcompat-v7:${rootProject.ext.support}"
+    compile "com.android.support:palette-v7:${rootProject.ext.support}"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile "com.android.support:design:${rootProject.ext.support}"
+    compile "com.android.support:cardview-v7:${rootProject.ext.support}"
+    compile "com.android.support:support-v4:${rootProject.ext.support}"
+    androidTestCompile "com.android.support:support-annotations:${rootProject.ext.support}"
+
+    //multi-dex
+    compile 'com.android.support:multidex:1.0.1'
+
+    // 多dex配置
+
+    //    Utility Code--------------------------------------------
+    compile 'com.blankj:utilcode:1.3.6'
+    compile 'org.xutils:xutils:3.3.36'
+
+    // -------------------------------------------------------------
+
+    //    UI组件--------------------------------------------
+
+    //进度条
+    compile 'com.dalong:rotaryballview:1.0.0'
+
+    //    compile 'com.wang.avi:library:2.1.3'
+
+    //toggle button
+    compile 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    //genius android
+
+    // ui module
+    compile "net.qiujuer.genius:ui:${genius_version}"
+    compile "net.qiujuer.genius:res:${genius_version}"
+
+    // use to bitmap blur and more
+    compile 'net.qiujuer.genius:graphics:2.0.0'
+
+    // ping/telnet/tracert/dns and run cmd
+    compile 'net.qiujuer.genius:kit-cmd:2.0.0'
+
+    // shuttle between ui-thread and child-thread
+    compile 'net.qiujuer.genius:kit-handler:2.0.0'
+
+    // class reflect
+    compile 'net.qiujuer.genius:kit-reflect:2.0.0'
+
+    //genius android steady branch
+
+    //    compile 'com.github.qiujuer:genius:2.4.1'
+    compile 'info.hoang8f:android-segmented:1.0.6'
+
+    //单选按钮
+    compile 'com.7heaven.widgets:segmentcontrol:1.17'
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+
+    //flycotablayout
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
+
+    //    material design
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    compile 'com.github.vajro:MaterialDesignLibrary:1.6'
+
+    //material dialog
+    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.afollestad.material-dialogs:commons:0.9.4.4'
+
+    //material edit text
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //日期选择
+    compile 'com.wdullaer:materialdatetimepicker:3.2.1'
+
+    //    compile 'com.borax12.materialdaterangepicker:library:1.9'
+
+    //选择器
+    compile 'cn.qqtheme.framework:AndroidPicker:1.0.3'
+    compile 'biz.kasual:materialnumberpicker:1.2.1'
+
+    //    compile('cn.qqtheme.framework:WheelPicker:1.5.2') {
+
+    //        exclude group: 'com.android.support'
+
+    //    }
+
+    //flowlayout
+    compile 'org.apmem.tools:layouts:1.10@aar'
+
+    //banner
+    compile 'com.youth.banner:banner:1.4.9'
+
+    //首页搜索View
+    compile 'org.sufficientlysecure:html-textview:1.3'
+
+    //动画库
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.hedgehog.ratingbar:app:1.1.2'
+
+    //根据视图大小自动适应文本大小
+    compile 'me.grantland:autofittextview:0.2.1'
+
+    //分割线
+    compile 'com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:1.0'
+
+    // -------------------------------------------------------------
+
+    //    推送通知,即时通讯--------------------------------------------
+
+    //极光推送
+
+    //
+    compile 'cn.jiguang.sdk:jpush:3.0.5'
+
+    // 此处以JPush 3.0.5 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.2'
+
+    // 此处以JCore 1.1.2 版本为例。
+
+    //    compile 'cn.jiguang.sdk:jmessage:2.1.2'  // 此处以JMessage 2.1.2 版本为例
+
+    //
+
+    //    //jmessage
+
+    //
+
+    //    compile 'cn.jiguang.imui:messagelist:0.2.0'
+
+    //
+
+    //    compile 'cn.jiguang.imui:chatinput:0.2.0'
+
+    // -------------------------------------------------------------
+
+    //    版本升级,崩溃日志--------------------------------------------
+
+    //bugly
+    compile 'com.tencent.bugly:crashreport_upgrade:1.3.1'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:3.3.1'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+    // -------------------------------------------------------------
+
+    //    网络通信,网络状态--------------------------------------------
+
+    //fastJson retrofit2 Covert
+    compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+
+    //    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+
+    //    gson
+    compile 'com.google.code.gson:gson:2.6.2'
+
+    //network status
+    compile 'com.caption:netmonitorlibrary:1.0.0'
+
+    //okhttputils  zhy
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'me.jessyan:retrofit-url-manager:1.2.5'
+
+    // -------------------------------------------------------------
+
+    //    图片显示,加载,转换--------------------------------------------
+
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    // compile 'com.github.bumptech.glide:glide:4.0.0'
+
+    //图片转换
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+
+    //圆形图片加载库,图片显示
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    //    compile 'com.github.chrisbanes:PhotoView:1.3.0'
+
+    //large image
+    compile 'com.shizhefei:LargeImageView:1.0.9'
+
+    // -------------------------------------------------------------
+
+    //    单元测试,功能测试--------------------------------------------
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:0.5', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test:rules:0.5', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
+
+    //    androidTestCompile 'com.android.support.test.espresso:espresso-accessibility:3.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-web:2.2.2'
+
+    //    androidTestCompile 'com.android.support.test.espresso.idling:idling-concurrent:3.0.1'
+
+    // The following Espresso dependency can be either "compile"
+
+    // or "androidTestCompile", depending on your app's implementation
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+
+    //    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+
+    // -------------------------------------------------------------
+
+    //    高德地图,导航--------------------------------------------
+    compile 'com.amap.api:location:3.5.0'
+    compile 'com.amap.api:search:5.3.1'
+    compile 'com.amap.api:navi-3dmap:5.3.0_3dmap5.3.0'
+
+    //    compile 'com.amap.api:location:3.5.0'
+
+    //    compile 'com.amap.api:search:5.3.1'
+
+    //    compile 'com.amap.api:navi-3dmap:6.0.0_3dmap6.0.0'
+    compile 'com.amap.api:map2d:latest.integration'
+
+    //    compile 'com.amap.api:3dmap:5.0.0'
+
+    // -------------------------------------------------------------
+
+    //    依赖注入--------------------------------------------
+
+    //使用APT生成工具，生成需要的DI代码
+    compile 'com.google.dagger:dagger-compiler:2.5'
+
+    //    //JSR250的jar包，使用这个和使用glassFish的那个一样，仅为了使用@Inject 和@Named注解
+
+    //    provided 'javax.annotation:jsr250-api:1.0'
+
+    //Dagger2 的依赖
+    compile 'com.google.dagger:dagger:2.5'
+
+    // -------------------------------------------------------------
+
+    //    RxJava,RxAndroid,RxBinding--------------------------------------------
+
+    //RxJava RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    //    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    //rxlifecycle
+    compile 'com.trello:rxlifecycle:0.3.0'
+    compile 'com.trello:rxlifecycle-components:0.3.0'
+
+    //    compile 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+
+    //// If you want to bind to Android-specific lifecycles
+
+    //    compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
+
+    //// If you want pre-written Activities and Fragments you can subclass as providers
+
+    //    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    // -------------------------------------------------------------
+
+    //    View注入框架--------------------------------------------
+
+    //    butterknife
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    // -------------------------------------------------------------
+
+    //    列表视图--------------------------------------------
+
+    //recycler view adapter
+
+    //    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.1.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+
+    //    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+
+    // -------------------------------------------------------------
+
+    //    图表--------------------------------------------
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //    --------------------------------------------
+
+    //    Other--------------------------------------------
+
+    //    annotation
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    //内存泄露检测
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //permissions
+    compile 'pub.devrel:easypermissions:0.4.0'
+
+    //android-job
+    compile 'com.evernote:android-job:1.1.11'
+
+    //non memory leak handler
+    compile 'com.badoo.mobile:android-weak-handler:1.1'
+
+    // -------------------------------------------------------------
+
+    //    音视频播放
+    compile 'fm.jiecao:jiecaovideoplayer:5.5.2'
+    compile 'com.danikula:videocache:2.7.0'
+
+    // -------------------------------------------------------------
+
+    //数据库
+    compile 'org.litepal.android:core:1.6.1'
+
+    //    debugCompile 'com.amitshekhar.android:debug-db:1.0.0'
+
+    //图片选择
+
+    /* compile 'com.github.LuckSiege:PictureSelectorLight:v1.1.4'*/
+
+    //省市县联动
+    compile 'com.contrarywind:Android-PickerView:3.2.4'
+    compile project(':picture_library')
+    compile 'com.facebook.fresco:fresco:0.12.0'
+
+    //圆心ImageView
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile project(':panellistviewlibrary')
+
+}
+
+// 依赖插件脚本
+//如果使用tinker,请取消注释下面这行代码
+// apply from: 'tinker-support.gradle'
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+
+   >
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   >
+                        <ListView
+
+                            android:divider="@null"
+                            android:visibility="visible"
+                            android:id="@+id/lv_server_situation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+
+                            />
+
+                </RelativeLayout>
+
+
+
+<!--
+        <include
+
+
+            layout="@layout/layout_recyclerview_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        </LinearLayout>
+
+
+</ScrollView>

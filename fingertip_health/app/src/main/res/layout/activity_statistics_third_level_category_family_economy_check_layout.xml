@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/statistics_background_color">
+
+    <include
+        layout="@layout/activity_statistics_third_level_category_family_economy_check_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="业务受理情况"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_acceptance_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_acceptance_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="核对结果类统计"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_report_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="核对报告排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_report_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="核对报告趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_review_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="核对报告复议排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_review_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="核对报告复议趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="核对项目类统计"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_check_project_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="核对项目类统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="信息共享情况分析"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_share_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="信息共享指标统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_36"
+    android:layout_height="@dimen/dp_36"
+    android:background="@drawable/street_or_above_marker_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_4"
+    android:clipChildren="false">
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tv_area_name"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:text=""
+        android:textSize="@dimen/txt_size_10"
+        app:minTextSize="@dimen/txt_size_6"/>
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tv_number"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:text=""
+        android:textSize="@dimen/txt_size_10"
+        app:minTextSize="@dimen/txt_size_6"/>
+</LinearLayout>

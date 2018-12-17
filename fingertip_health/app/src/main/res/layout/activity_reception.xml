@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorTheme"
+        app:contentInsetStart="0.0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--// app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"可以出水波纹-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_marginTop="13dip"
+                android:id="@+id/ll_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:id="@+id/im_back"
+                    android:layout_width="@dimen/img_width_18dp"
+                    android:layout_height="@dimen/img_height_18dp"
+                    android:contentDescription=""
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_left" />
+                <TextView
+                    android:layout_toRightOf="@+id/im_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:text="@string/back"
+                    android:textAppearance="@style/ToolBar.Title"
+                    android:textSize="@dimen/txt_size_18" />
+                <TextView
+                    android:id="@+id/online_consultation_title"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="受理中心"
+                    android:textAppearance="@style/ToolBar.Title" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/im_guide"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_reception"
+                    android:layout_width="102dp"
+                    android:layout_height="81dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:name="com.jqsoft.grassroots_civil_administration_platform.di.ui.fragment.SelectAddressPop"
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <include
+            android:id="@+id/lay_content"
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

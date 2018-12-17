@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/statistics_background_color">
+
+    <include
+        layout="@layout/activity_statistics_third_level_category_medical_assistance_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="整体资金支出构成"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_money_constitutioin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="资金构成">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_compensate_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="资金补偿方式构成">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_compensate_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="资金补偿类型构成">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="直接医疗救助支出情况"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_assistance_outcome_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_assistance_outcome_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_assistance_outcome_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="民政救助类别统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_assistance_increase_ratio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="直接医疗救助增长率">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_assistance_outcome_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="医疗救助水平分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="资助参保(参合)支出情况"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_finance_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_finance_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_finance_increase_ratio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="资助参保增长率">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

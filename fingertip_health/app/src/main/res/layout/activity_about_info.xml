@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_my_info_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_5"
+                android:orientation="vertical"
+                android:layout_width="30dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:background="@mipmap/ic_yuan"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:background="#53B4FF"
+                    android:layout_width="@dimen/dp_3"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:background="@mipmap/ic_longcircular"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="16dp"
+                        android:text="联系我们"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+
+                        />
+                </LinearLayout>
+                    <!--<TextView-->
+                        <!--android:id="@+id/contactUs"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/margin_normal"-->
+                        <!--android:layout_marginRight="@dimen/margin_normal"-->
+                        <!--android:textColor="@color/colorSubtitle"-->
+                        <!--android:textSize="@dimen/txt_size_normal" />-->
+                <LinearLayout
+                    android:layout_margin="@dimen/dp_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/ic_blibliaddress"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地址:"
+                    android:textColor="@color/colorSubtitle"
+                    android:textSize="@dimen/txt_size_snormal"
+
+                    />
+                    <TextView
+
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_snormal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="@dimen/dp_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/ic_lvphone"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20" />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电话:"
+                    android:textColor="@color/colorSubtitle"
+                    android:textSize="@dimen/txt_size_snormal"
+
+                    />
+                    <TextView
+
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_snormal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_marginRight="@dimen/dp_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginLeft="14dp"
+                        android:background="@mipmap/ic_yuan"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <ImageView
+                        android:layout_marginLeft="6dp"
+                        android:layout_gravity="center"
+                        android:background="#53B4FF"
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/dp_5"
+
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@mipmap/ic_longcircular"
+                        android:layout_width="85dp"
+                        android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:gravity="center"
+                        android:text="免责声明"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+
+                        /></LinearLayout>
+                    <TextView
+                        android:layout_margin="@dimen/dp_7"
+                        android:id="@+id/disclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_snormal" />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/ic_yuan" />
+
+                    <ImageView
+
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#53B4FF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/dp_5"
+
+                        android:background="@mipmap/ic_longcircular"
+                        android:layout_width="85dp"
+                        android:layout_height="30dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:gravity="center"
+                        android:text="技术支持"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+
+                        /></LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="@dimen/dp_7"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@mipmap/jqname"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_5"
+
+                        android:text="公司名称：安徽晶奇网络科技股份有限公司"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_snormal" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="@dimen/dp_7"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@mipmap/ic_lvphone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_5"
+
+                        android:id="@+id/companytel"
+                        android:text="联系电话：0551-65699605"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_snormal" />
+                    </LinearLayout>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/technicalSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:textColor="@color/colorSubtitle"
+                        android:textSize="@dimen/txt_size_normal" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

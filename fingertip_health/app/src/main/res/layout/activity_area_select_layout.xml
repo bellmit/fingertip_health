@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_area_select_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/layout_area_select"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="@dimen/dp_6">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="省(直辖市):"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/txt_size_normal" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_province"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="请选择省(直辖市)"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/txt_size_normal"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp_24"-->
+                    <!--android:layout_height="@dimen/dp_24"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/next_black"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/line_1px"-->
+                <!--android:background="@color/gray"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="@dimen/dp_6">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="市:"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/txt_size_normal" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_city"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="请选择市"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/txt_size_normal"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp_24"-->
+                    <!--android:layout_height="@dimen/dp_24"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/next_black"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/line_1px"-->
+                <!--android:background="@color/gray"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="@dimen/dp_6">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="区(县):"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/txt_size_normal" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_county"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="请选择区(县)"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/txt_size_normal"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp_24"-->
+                    <!--android:layout_height="@dimen/dp_24"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/next_black"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/line_1px"-->
+                <!--android:background="@color/gray"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="@dimen/dp_6">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="街道(乡镇):"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/txt_size_normal" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_street"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="请选择街道(乡镇)"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/txt_size_normal"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp_24"-->
+                    <!--android:layout_height="@dimen/dp_24"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/next_black"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/line_1px"-->
+                <!--android:background="@color/gray"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:padding="@dimen/dp_6">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="社区(村):"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="@dimen/txt_size_normal" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_village"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="right"-->
+                    <!--android:text="请选择社区(村)"-->
+                    <!--android:textColor="@color/gray"-->
+                    <!--android:textSize="@dimen/txt_size_normal"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dp_24"-->
+                    <!--android:layout_height="@dimen/dp_24"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/next_black"-->
+                    <!--android:layout_marginLeft="@dimen/margin_normal"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<android.support.v7.widget.AppCompatButton-->
+                <!--android:id="@+id/bt_search"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/dp_18"-->
+                <!--android:layout_marginLeft="@dimen/dp_8"-->
+                <!--android:layout_marginRight="@dimen/dp_8"-->
+                <!--android:background="@drawable/green_background_corner_radius"-->
+                <!--android:text="搜索"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/txt_size_normal" />-->
+
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+</LinearLayout>

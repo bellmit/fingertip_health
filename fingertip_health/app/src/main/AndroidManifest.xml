@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jqsoft.fingertip_health"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+
+    <!-- 悬浮框权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- NFC识别身份证权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.nfc" -->
+    <!-- android:required="true" /> -->
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.usb.host" -->
+    <!-- android:required="true" /> -->
+    <application
+        android:name="com.jqsoft.fingertip_health.di_app.DaggerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/r_app_icon_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/r_app_icon_new"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <!-- http url -->
+        <meta-data
+            android:name="HTTP_ACCESS_URL"
+            android:value="${HTTP_ACCESS_URL_VALUE}" />
+        <meta-data android:name="HTTP_UPLOAD_VIDEO_URL"
+            android:value="${HTTP_UPLOAD_VIDEO_URL_VALUE}" />
+        <meta-data
+            android:name="BUGLY_APP_ID"
+            android:value="${BUGLY_APP_ID_VALUE}" />
+        <meta-data
+            android:name="LOGIN_APP_NAME"
+            android:value="${LOGIN_APP_NAME_VALUE}" />
+        <!-- 高德地图 -->
+       <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5a67ca604e85f9b238139b9a81ac4003" />
+        <!-- 高德地图 -->
+   <!--    <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="025bedebb924cfe533612a79e04918a7" />-->
+        <activity
+            android:hardwareAccelerated="false"
+
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:hardwareAccelerated="false"
+
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.map_navi.BusRouteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.map_navi.BusRouteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${FILE_PROVIDER_AUTHORITIES_VALUE}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <provider
+            android:name="com.jqsoft.fingertip_health.util.MyFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <!-- android:authorities="${FILE_PROVIDER_AUTHORITIES_VALUE}" -->
+        <!-- android:authorities="signed_resident_clientnt.fileProvider" -->
+
+        <!--并入provider_paths中-->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities:="fingertip_health"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_paths" />-->
+        <!--</provider>-->
+
+
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <service
+            android:name="com.jqsoft.fingertip_health.service.LongTermService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=".src_long_term_service">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.jqsoft.fingertip_health.receiver.LongTermReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.jqsoft.fingertip_health.service.FirService"
+            android:process=":fir" />
+        <service
+            android:name="com.jqsoft.fingertip_health.service.SecService"
+            android:process=":sec" />
+        <service
+            android:name="com.jqsoft.fingertip_health.service.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!--
+         <receiver
+             android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+             android:name=".receiver.StaticRegisterReceiver" >
+             <intent-filter >
+                 <action android:name="android.intent.action.SCREEN_ON" />
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+             </intent-filter>
+         </receiver>
+        -->
+
+
+        <!--
+                 <receiver android:name=".receiver.StaticRegisterReceiver">
+                android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    <action android:name="android.intent.action.SCREEN_ON" />
+                    <action android:name="android.intent.action.SCREEN_OFF" />
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    <action android:name="android.intent.action.USER_PRESENT" />
+                    <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                </intent-filter>
+            </receiver>
+        -->
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.keepalive.single_pixel.SinglePixelActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SinglePixelActivityStyle"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.map_navi.MapServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.map_navi.SelectMapLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AreaSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.FamilyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.OutpatientChargesActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+
+        </activity>
+
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.IntroductionActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SelectOutChargeListActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.WorkbenchActivity"
+            android:clearTaskOnLaunch="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
+
+
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".di.ui.activity.LoginActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:resizeableActivity="true"
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.LoginActivityNew"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SelectChargesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ElectronicPrescriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsSecondLevelCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsMultipageContainerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsSpecificActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.FamilyMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddFamilyMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.RetrievePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PolicyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReliefItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PolicyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.NotificationDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ChatDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HouseholdDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SocialHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <!-- <activity -->
+        <!-- android:name=".di.ui.activity.ChatActivity" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme" /> -->
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MedicalInstitutionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <!-- <activity -->
+        <!-- android:name=".di.ui.activity.MedicalInstitutionDetailActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme" /> -->
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.RouteNaviActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SettingActivityNew"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <!-- <activity -->
+        <!-- android:name=".jmessage.messages.MessageListActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme" -->
+        <!-- android:windowSoftInputMode="adjustResize" android:configChanges="orientation|screenSize|keyboardHidden" /> -->
+        <!-- <activity -->
+        <!-- android:name=".jmessage.messages.VideoActivity" -->
+        <!-- android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" android:configChanges="orientation|screenSize|keyboardHidden"/> -->
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.base.ImageDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ExecutionProjectsActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.OnlineConsultationActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.WanttoAdvice"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.SignSeverPakes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.SignDoctorSeverPakes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DoctorServerDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.IgGuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DirectoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.VillageLevelMedicalInstitutionDirectoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MedicalPersonDirectoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MySignInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.IntelligentHonourAgreementRemindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SignServiceAssessActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SignServiceIncomeActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.SignApplicationActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReceptionListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PoliticsActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SmartAlertActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name=".di.ui.activity.SignClientDoctorSeverPakes"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SignedAgreement"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.CivilobjectActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SocialAssistanceObject"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SocialDetailActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.IgGuidePostListActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HandleProgress"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ActivityProgress"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PersonalInfoActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HandleProgressDetailActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AboutInfoActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ChangePasswordActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReceptionActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReceptionDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.map_navi.ReceptionMapServiceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SettingServerChangeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SettingServerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PersonCollectionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SocialHistoryPageActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HouseholdSurveysActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddServeryActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddImgVideoServeryActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReceptionDetailNewListActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <!-- <activity -->
+        <!-- android:name=".di.ui.activity.AppointmentRegistrationActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppTheme" android:configChanges="orientation|screenSize|keyboardHidden"/> -->
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddDemocraticActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DisPlayDemocraticActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DeviceListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="蓝牙设置"
+            android:theme="@android:style/Theme.Dialog"
+            />
+
+        <!-- <activity android:name=".ui.activity.main.SplashActivity"> -->
+        <!-- &lt;!&ndash;<intent-filter>&ndash;&gt; -->
+        <!-- &lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt; -->
+
+
+        <!-- &lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt; -->
+        <!-- &lt;!&ndash;</intent-filter>&ndash;&gt; -->
+        <!-- </activity> -->
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+
+        <!-- <service android:name="com.amap.api.location.APSService" /> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".receiver.MyReceiver" -->
+        <!-- android:enabled="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.REGISTRATION" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.CONNECTION" /> -->
+
+
+        <!-- <category android:name="signed_resident_clientnt" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ExecuProjectActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name=".di.ui.activity.DetailPeopleInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.PendExecuActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".di.ui.activity.ReservationServiceActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".di.ui.activity.OnLineSignApplication"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MotifyExecuActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AccessFileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReserrverServerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ClientSignServiceAssessActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SignServiceEvalution"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddFindActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HadReserrverServerActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <!--<activity-->
+            <!--android:name="com.jqsoft.fingertip_health.di.ui.activity.DetailPeopleInfoActivity"-->
+            <!--android:windowSoftInputMode="stateAlwaysHidden"-->
+            <!--android:configChanges="orientation|screenSize|keyboardHidden"/>-->
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HighBloodActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SignDoctorListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HighBloodListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DiabetesMellitusListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DiabetesMellitusActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DetailFindActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DetailFindDiscoverActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SocialAssestansActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.UrbanLowInsuranceActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddUrbanLowActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.HandleFindActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.DetailFindDaibanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.UrbanFamilyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.UrbanFamilybianjiActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.UrbanFamilybianjiStatusActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AddUrbanLowBianjiActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategorySubsistenceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryVeryPoorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryLowSalaryFamilyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryMedicalAssistanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryTempAssistanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryFamilyEconomyCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.StatisticsThirdLevelCategoryDisasterAssistanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MainMapActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SearchMapActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.SearchResultActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ReceptionNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.WorkGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.ListGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+        android:name="com.jqsoft.fingertip_health.di.ui.activity.MyMessageActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.MyMessageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.QuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AdviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.QuestionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AdviceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.test_video_upload.CameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.base.VideoDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.AdviceHadDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.statistics.StatisticsThirdLevelCategoryActivityNew"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.webview.MainActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme"
+                  android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.fingertip.PersonJiandangListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.fingertip.PersonJiandangActivity"
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name=".di.ui.activity.SettleAccountsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name=".di.ui.activity.fingertip.SignManagementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name=".di.ui.activity.SignPeopleManagementActivityForFingertip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.fingertip.PolicyTipDetailActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme"
+                  android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity
+            android:hardwareAccelerated="false"
+            android:name=".di.ui.activity.fingertip.NewDoctorSignActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.fingertip.KucunfenxiListActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme"
+                  android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity
+            android:hardwareAccelerated="false"
+            android:name="com.jqsoft.fingertip_health.di.ui.activity.fingertip.PageDetailActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme"
+                  android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+    </application>
+
+</manifest>

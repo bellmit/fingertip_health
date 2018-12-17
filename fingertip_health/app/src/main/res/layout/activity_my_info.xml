@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_my_info_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_20"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingTop="@dimen/dp_20"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/img_width_80dp"
+                    android:layout_height="@dimen/img_height_80dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_login_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_10dp"
+                android:paddingRight="@dimen/padding_10dp"
+                >
+
+
+                <TableRow android:layout_marginTop="@dimen/margin_14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_login_alias"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_login_alias"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/my_info_value_color"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                </TableRow>
+
+                <include layout="@layout/horizontal_line" />
+
+                <TableRow android:layout_marginTop="@dimen/margin_14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_id_card_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_id_card_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/my_info_value_color"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                </TableRow>
+
+                <include layout="@layout/horizontal_line" />
+
+                <TableRow android:layout_marginTop="@dimen/margin_14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_institution_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_institution_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/my_info_value_color"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                </TableRow>
+
+                <include layout="@layout/horizontal_line" />
+
+                <TableRow
+                    android:layout_marginTop="@dimen/margin_14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_contact_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_normal"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_contact_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/my_info_value_color"
+                            android:textSize="@dimen/txt_size_normal" />
+
+                        <ImageView
+                            android:id="@+id/btn_update_phone_number"
+                            android:layout_width="@dimen/img_width_normal"
+                            android:layout_height="@dimen/img_height_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_update_phone_number" />
+
+                        <!--<net.qiujuer.genius.ui.widget.Button-->
+                        <!--android:id="@+id/btn_update_phone_number"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/margin_normal"-->
+                        <!--android:background="@drawable/black_border_4_radius_white_background"-->
+                        <!--android:padding="@dimen/padding_normal"-->
+                        <!--android:text="@string/hint_update_phone_number"-->
+                        <!--app:gTouchColor="@color/red_400"-->
+                        <!--app:gTouchCornerRadius="@dimen/corner_radius_6px"-->
+                        <!--app:gTouchDurationRate="0.7"-->
+                        <!--app:gTouchEffect="auto" />-->
+
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <include layout="@layout/horizontal_line" />
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

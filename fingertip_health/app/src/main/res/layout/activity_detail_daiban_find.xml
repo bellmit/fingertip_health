@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.jqsoft.fingertip_health.di.ui.activity.AddFindActivity">
+
+    <include
+        android:id="@+id/ll_toolbar"
+        layout="@layout/activity_sign_service_assess_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+
+        android:id="@+id/ll_shixian"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+            android:src="@drawable/bitian"
+            android:layout_width="8dip"
+            android:layout_height="8dip" />
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:id="@+id/setdate_shixian"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:text="市、县"
+            android:textSize="15sp" />
+
+        <TextView
+            android:textColor="#818181"
+            android:id="@+id/setting_shixian"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请选择市县"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view0"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_shixian"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:layout_below="@+id/view0"
+        android:id="@+id/ll_xiangzhen"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+            android:src="@drawable/bitian"
+            android:layout_width="8dip"
+            android:layout_height="8dip" />
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:id="@+id/setdate_xiangzhen"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:text="乡镇社区"
+            android:textSize="15sp" />
+
+        <TextView
+            android:textColor="#818181"
+            android:id="@+id/setting_xiangzhen"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请选择乡镇社区"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_xiangzhen"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:layout_below="@+id/view1"
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+
+            android:src="@drawable/bitian"
+            android:layout_width="8dip"
+            android:layout_height="8dip" />
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:background="@android:color/white"
+            android:text="我的电话"
+            android:textSize="15sp" />
+
+        <TextView
+
+            android:singleLine="true"
+            android:digits="1234567890"
+            android:textColor="#818181"
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入联系电话"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:layout_below="@+id/view2"
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+            android:src="@drawable/bitian"
+            android:layout_width="8dip"
+            android:layout_height="8dip" />
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:text="发现地址"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:maxLength="40"
+            android:maxLines="3"
+            android:textColor="#818181"
+            android:id="@+id/et_address"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入地址"
+
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:layout_below="@+id/view3"
+        android:id="@+id/ll_reason"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+            android:src="@drawable/bitian"
+            android:layout_width="8dip"
+            android:layout_height="8dip" />
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:text="情况说明"
+            android:textSize="15sp" />
+
+        <TextView
+            android:maxLength="100"
+            android:maxLines="3"
+            android:textColor="#818181"
+            android:id="@+id/et_reason"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="请输入情况说明"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_reason"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:layout_below="@+id/view4"
+        android:id="@+id/ll_photo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:layout_marginLeft="2dip"
+            android:textColor="#191616"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:text="图片上传"
+            android:textSize="15sp" />
+
+        <TextView
+            android:focusable="false"
+            android:textColor="#818181"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="最多上传7张图片"
+            android:maxLength="40"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view5"
+        android:background="#e8e8e8"
+        android:layout_below="@+id/ll_photo"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="10dip"
+        android:layout_below="@+id/view5"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_below="@+id/recycler"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_delete"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/checkbox_execu_height_20dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/checkbox_execu_height_20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_18dp"
+            android:paddingRight="@dimen/padding_18dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:text="重置"
+            android:textColor="@android:color/white"
+            app:rv_backgroundColor="@color/colorTheme"
+            app:rv_backgroundPressColor="@color/orangered"
+            app:rv_cornerRadius="6dp" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_zancun"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/checkbox_execu_height_20dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/checkbox_execu_height_20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_18dp"
+            android:paddingRight="@dimen/padding_18dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:text="暂存"
+            android:textColor="@android:color/white"
+            app:rv_backgroundColor="@color/colorTheme"
+            app:rv_backgroundPressColor="@color/orangered"
+            app:rv_cornerRadius="6dp" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/btn_save"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/checkbox_execu_height_20dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/checkbox_execu_height_20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_18dp"
+            android:paddingRight="@dimen/padding_18dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            app:rv_backgroundColor="@color/colorTheme"
+            app:rv_backgroundPressColor="@color/orangered"
+            app:rv_cornerRadius="6dp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

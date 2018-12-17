@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:f="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_medical_institution_detail_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/sv_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--<com.amap.api.maps.MapView-->
+
+                <!--android:id="@+id/map"-->
+
+                <!--android:layout_width="match_parent"-->
+
+                <!--android:layout_height="@dimen/map_height" />-->
+
+            <LinearLayout
+                android:id="@+id/ll_rating_and_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/darkorange"
+                    android:textSize="@dimen/txt_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/img_width_small"
+                    android:layout_height="@dimen/img_height_small"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/next_black" />
+            </LinearLayout>
+
+            <org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fl_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="fill"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal"
+                f:debugDraw="false"
+                f:layoutDirection="ltr"
+                f:weightDefault="1.0">
+
+            </org.apmem.tools.layouts.FlowLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/institution_info"
+                android:textColor="@color/deepskyblue"
+                android:textSize="@dimen/txt_size_normal" />
+
+            <include
+                layout="@layout/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_hospital_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_hospital_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="@dimen/txt_size_normal" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_call_phone"
+                    android:layout_width="@dimen/img_width_small"
+                    android:layout_height="@dimen/img_height_small"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/call_telephone_blue" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_1px" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

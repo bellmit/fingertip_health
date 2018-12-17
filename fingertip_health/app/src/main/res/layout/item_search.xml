@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:background="#F2F2F2"
+    android:id="@+id/ll_detail"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:padding="5dip"
+            android:id="@+id/img_head"
+            android:layout_marginLeft="5dip"
+            android:layout_width="80dip"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+         >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dip"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="张某某"
+                    android:textColor="#000"
+                    />
+                <TextView
+                    android:id="@+id/tv_xingbie"
+                    android:layout_marginLeft="10dip"
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:text="68岁"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_below="@+id/ll_name"
+                android:textColor="#87C3FD"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:text="最近服务:2017-05-14  下次服务:2017-08-15"
+                />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:gravity="top"
+              android:background="#fff"
+    >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginRight="@dimen/dp_6"
+        >
+
+        <TextView
+            android:gravity="left|center"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text=""
+            android:textColor="@color/list_item_main_text_color"
+            android:textSize="@dimen/txt_size_normal"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:layout_below="@+id/tv_title"
+            android:gravity="left|center"
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text=""
+            android:textColor="@color/statistics_title_color"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:layout_below="@+id/tv_content"
+            android:gravity="left|center"
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text=""
+            android:textColor="@color/statistics_title_color"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/i_next"
+            android:layout_centerInParent="true"
+            android:layout_alignRight="@+id/tv_content"
+            />
+    </RelativeLayout>
+    <View
+        android:visibility="gone"
+        android:layout_marginTop="6dip"
+        android:background="@color/transparentsmll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"/>
+
+</LinearLayout>

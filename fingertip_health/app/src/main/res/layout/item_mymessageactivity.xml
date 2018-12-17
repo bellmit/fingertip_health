@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="65dip"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_marginTop="2.5dip"
+        android:layout_marginBottom="2.5dip"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dip">
+
+        <ImageView
+
+            android:layout_marginLeft="10dip"
+            android:src="@mipmap/ic_mymessage"
+            android:id="@+id/iv_title"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+        <LinearLayout
+
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/iv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:text="暂无数据"
+                    android:textSize="@dimen/dp_14"
+                    android:id="@+id/tv_state"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_alignParentRight="true"
+                android:text="暂无数据"
+                android:textSize="@dimen/dp_12"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:lines="1"
+
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="暂无数据"
+                    android:textSize="@dimen/dp_12"
+                    android:id="@+id/tv_message"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

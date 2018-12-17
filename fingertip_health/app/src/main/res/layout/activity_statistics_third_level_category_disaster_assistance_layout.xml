@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/statistics_background_color">
+
+    <include
+        layout="@layout/activity_statistics_third_level_category_disaster_assistance_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="排名统计"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="趋势分析"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="受灾救助水平"
+                android:textColor="@color/statistics_foreground_color"
+                android:textSize="@dimen/txt_size_14" />
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_average_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_ranking_statistics"
+                app:text_string="次均救助金额排名统计">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/statistics_background_color"/>
+
+            <com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout
+                android:id="@+id/ithl_average_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:normal_image_id="@mipmap/g_trend_analysis"
+                app:text_string="次均救助金额趋势分析">
+
+            </com.jqsoft.fingertip_health.view.ImageTextHorizontalLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

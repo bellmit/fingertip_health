@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorTheme"
+        app:contentInsetStart="0.0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--// app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"可以出水波纹-->
+        <TextView
+            android:id="@+id/treatment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/activity_title_my_info"
+            android:textAppearance="@style/ToolBar.Title"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/dp_3">
+            <ImageView
+                android:layout_width="@dimen/img_width_18dp"
+                android:layout_height="@dimen/img_height_18dp"
+                android:contentDescription=""
+                android:src="@mipmap/arrow_left"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textAppearance="@style/ToolBar.Title"
+                android:layout_marginLeft="@dimen/dp_3"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_add"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center|right"
+            android:src="@mipmap/i_add"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_weight="1"
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:windowSoftInputMode="adjustResize">
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:id="@+id/sv_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:clipChildren="true">-->
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:divider="@null"
+            android:gravity="center_horizontal" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginBottom="@dimen/dp_50"-->
+            <!--android:layout_gravity="center|bottom"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp">-->
+        <!--<com.flyco.roundview.RoundTextView-->
+
+            <!--android:layout_weight="1"-->
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:ellipsize="end"-->
+            <!--android:gravity="center"-->
+            <!--android:text="删除"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--app:rv_backgroundColor="#067eee"-->
+            <!--app:rv_cornerRadius="6dp" />-->
+        <!--<com.flyco.roundview.RoundTextView-->
+            <!--android:id="@+id/btn_save"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="保存"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--app:rv_backgroundColor="#067eee"-->
+            <!--app:rv_cornerRadius="6dp" />-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:id="@+id/btn_delete"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignRight="@+id/Reset"
+                android:layout_marginRight="32dp"
+                android:src="@mipmap/ic_delete" />
+            <TextView
+
+                android:layout_centerInParent="true"
+                android:id="@+id/Reset"
+                android:text="删除"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_save"
+            android:background="@color/primary_color"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_alignRight="@+id/post"
+                android:layout_marginRight="32dp"
+                android:src="@mipmap/post_white"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/post"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

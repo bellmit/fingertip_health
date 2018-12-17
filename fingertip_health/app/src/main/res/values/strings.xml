@@ -1,0 +1,430 @@
+<resources>
+    <!--<string name="app_name">安徽救助</string>-->
+
+    <!--<string name="xunfei_app_id">5923dffb</string>-->
+    <!--<string name="login_page_app_name">安徽救助</string>-->
+    <string name="login_page_app_client_type">居民端</string>
+
+    <!--<string name="index_page_title">安徽救助工作平台</string>-->
+    <string name="index_page_policy_translate">政策新闻</string>
+    <string name="index_page_policy_more">更多></string>
+    <string name="index_page_remind">智能履约提醒</string>
+    <string name="index_page_show_family_remind">显示家庭成员提醒></string>
+    <string name="index_page_message_sent_by_doctor_hint">医生消息</string>
+
+    <string name="remind_page_call_doctor">一键呼叫医生</string>
+
+    <string name="index_default_area_name">全市</string>
+    <string name="hint_select_area">请选择区域</string>
+
+    <string name="query">查询</string>
+    <string name="statistics_list">统计列表</string>
+    <string name="statistics_chart">统计图</string>
+
+    <!--高德地图-->
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+
+    <string name="hint_suggestion">提示</string>
+    <string name="hint_whether_lock_hospital">确定锁定该住院信息?</string>
+    <string name="hint_whether_unlock_hospital">确定解锁该住院信息?</string>
+    <string name="hint_select_one_item">您选中了一项</string>
+    <string name="hint_confirm_to_execute">确定要执行吗?</string>
+    <string name="hint_confirm_to_sign">确定要签约吗?</string>
+    <string name="hint_confirm_to_cancel_application">确定要取消申请吗?</string>
+    <string name="hint_confirm_to_read_sign_service_assess_item">确定要阅读此条评价吗?阅读后将收入已查阅列表。</string>
+
+    <string name="hint_accumulated_assess_star_level">累计评价星级</string>
+    <string name="hint_total_paid_package">总有偿包</string>
+
+    <string name="hint_chart_large_value_text">(k:千 m:百万)</string>
+
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="send">发送</string>
+
+    <string name="back">返回</string>
+    <string name="color_preset">预设</string>
+    <string name="color_custom">自定义颜色</string>
+    <string name="color_preset_first_level">预设颜色第一级</string>
+    <string name="color_preset_second_level">预设颜色第二级</string>
+
+    <string name="folder_select_button_title">选取</string>
+    <string name="new_folder_action_name">新建文件夹</string>
+
+    <string name="please_select_sign_year">请选择签约年份</string>
+
+    <string name="login_page_forget_password">忘记密码?</string>
+    <string name="login_page_register_immediately">立即注册</string>
+
+    <string name="login_username">账号</string>
+    <string name="login_password">密码</string>
+    <string name="login_please_input_username">请输入账号</string>
+    <string name="login_please_input_password">请输入登录密码</string>
+
+    <string name="register_nickname">昵称</string>
+    <string name="register_id_card">身份证</string>
+    <string name="register_phone_prefix">+86</string>
+    <string name="register_password">密码</string>
+
+    <string name="register_hint_nickname">请输入昵称</string>
+    <string name="register_hint_id_card">请输入身份证号</string>
+    <string name="register_hint_phone">请输入手机号</string>
+    <string name="register_hint_password">请输入密码</string>
+    <string name="retrieve_password_hint_new_password">新密码</string>
+    <string name="retrieve_password_hint_confirm_password">确认密码</string>
+    <string name="add_family_member_hint_family_member_name">请输入家庭成员名称</string>
+    <string name="add_family_member_hint_family_member_id_card_number">请输入家庭成员身份证号</string>
+    <string name="add_family_member_hint_relationship_to_login_user">与登录用户的关系</string>
+
+    <string name="relationship_self">本人或户主</string>
+    <string name="relationship_spouse">配偶</string>
+    <string name="relationship_son">子</string>
+    <string name="relationship_daughter">女</string>
+    <string name="relationship_grandson">孙子</string>
+    <string name="relationship_granddaughter">孙女、外孙子、外孙女</string>
+    <string name="relationship_parent">父母</string>
+    <string name="relationship_grand_parent">祖父母、外祖父母</string>
+    <string name="relationship_sibling">兄弟姐妹</string>
+    <string name="relationship_other">其他</string>
+    <string name="relationship_daughter_in_law">儿媳</string>
+
+    <string name="register_hint_nickname_empty">昵称不能为空</string>
+    <string name="register_hint_nickname_invalid">昵称不合法</string>
+    <string name="register_hint_id_card_empty">身份证号不能为空</string>
+    <string name="register_hint_id_card_invalid">身份证号不合法</string>
+    <string name="register_hint_phone_empty">手机号码不能为空</string>
+    <string name="register_hint_phone_invalid">手机号码不合法</string>
+    <string name="register_hint_password_empty">密码不能为空</string>
+    <string name="register_hint_password_invalid">密码不合法</string>
+
+    <string name="retrieve_password_hint_new_password_empty">新密码不能为空</string>
+    <string name="retrieve_password_hint_new_password_invalid">新密码不合法</string>
+    <string name="retrieve_password_hint_confirm_password_empty">确认密码不能为空</string>
+    <string name="retrieve_password_hint_confirm_password_invalid">确认密码不合法</string>
+    <string name="retrieve_password_hint_two_password_not_equal">两次密码不一致</string>
+
+    <string name="add_family_member_not_select_relationship">请选择与登录用户的关系</string>
+    <string name="add_family_member_hint_name_empty">家庭成员名称不能为空</string>
+
+    <string name="activity_title_login">登录</string>
+    <string name="activity_title_treatment">诊断</string>
+    <string name="activity_title_chat">聊天</string>
+    <string name="activity_title_medical_institution">医疗机构</string>
+    <string name="activity_title_medical_institution_info">医院信息</string>
+    <string name="activity_title_canhe_info">参合信息</string>
+    <string name="activity_title_canhe_detail_info">参合详情</string>
+    <string name="activity_title_compensate_info">补偿信息</string>
+    <string name="activity_title_compensate_detail_info">补偿详情</string>
+    <string name="activity_title_compensate_fee_detail">补偿费用详情</string>
+    <string name="activity_title_image_display">图片显示</string>
+    <string name="activity_title_latest_7_days_need_execute_projects">近7天需要执行项目</string>
+    <string name="activity_title_my_info">我的信息</string>
+    <string name="activity_title_directory">通讯录</string>
+    <string name="activity_title_my_sign_info">我的签约信息</string>
+    <string name="activity_title_sign_service_assess">主动发现</string>
+    <string name="activity_title_sign_service_income">签约服务收入</string>
+    <string name="activity_title_intelligent_honour_agreement_remind">智能履约提醒</string>
+    <string name="activity_title_sign_application">签约申请</string>
+    <string name="activity_title_appointment_registration">预约挂号</string>
+    <string name="activity_title_online_consultation">选择诊断</string>
+    <string name="activity_title_reservation_execution">预约执行</string>
+
+
+    <string name="activity_title_register_info">注册信息</string>
+    <string name="activity_title_policy_translate">政策新闻</string>
+    <string name="activity_title_policy_translate_detail">政策新闻详情</string>
+    <string name="activity_title_notification">通知公告</string>
+    <string name="activity_title_notification_detail">通知公告详情</string>
+    <string name="activity_title_retrieve_password">忘记密码</string>
+    <string name="activity_title_family_member">家庭成员</string>
+    <string name="activity_title_add_family_member">添加家庭成员</string>
+
+    <string name="activity_title_map_service">地图服务</string>
+    <string name="activity_title_select_map_location">地图选点</string>
+    <string name="activity_title_area_select">区域设置</string>
+
+    <string name="activity_title_bus_route">公交路线规划</string>
+
+    <string name="fragment_title_inhospital_inspect">签约信息</string>
+    <string name="fragment_title_heyiban">签约居民信息</string>
+    <string name="fragment_title_mine">我的</string>
+    <string name="fragment_title_all">查询</string>
+    <string name="fragment_title_statistics">统计</string>
+    <string name="fragment_title_handle">办理</string>
+
+    <string name="activity_title_setting">设置</string>
+
+    <string name="hint_check_update">检测更新</string>
+
+    <string name="hint_whether_enable_push">是否接收推送通知</string>
+    <string name="hint_allowed_push_time">允许推送时间</string>
+    <string name="hint_allowed_push_start_time">允许推送起始小时值</string>
+    <string name="hint_allowed_push_end_time">允许推送结束小时值</string>
+    <string name="hint_push_silence_time">推送静默时间</string>
+    <string name="hint_push_silence_start_time">推送静默起始时间</string>
+    <string name="hint_push_silence_end_time">推送静默结束时间</string>
+
+    <string name="hint_home_round_visit">家庭巡诊</string>
+    <string name="hint_blood_pressure">血压</string>
+    <string name="hint_execute">执行</string>
+
+    <string name="hint_service_project">服务项目</string>
+    <string name="hint_execution_time">执行时间</string>
+    <string name="hint_assess_level">评价星级</string>
+    <string name="hint_assess_time">评价时间</string>
+    <string name="hint_assess_content">评价内容</string>
+
+    <string name="my_info_username">用户名</string>
+    <string name="my_info_account">账\u0020\u0020\u0020\u0020号</string>
+
+    <string name="hint_id_number">身份证号</string>
+    <string name="hint_archive_number">档案号</string>
+    <string name="hint_application_time">申请时间</string>
+    <string name="hint_desired_service_package">意向服务包</string>
+    <string name="hint_home_address">家庭住址</string>
+
+    <string name="hint_sign">签约</string>
+    <string name="hint_cancel_application">取消申请</string>
+    <string name="hint_read">阅读</string>
+
+    <string name="hint_username">用户姓名：</string>
+    <string name="hint_login_account">登录账号：</string>
+    <string name="hint_login_alias">登录别名：</string>
+    <string name="hint_id_card_number">身份证号：</string>
+    <string name="hint_institution_name">机构名称：</string>
+    <string name="hint_contact_number">联系电话：</string>
+    <string name="hint_update_phone_number">更新电话</string>
+
+    <string name="hint_total_fee">总费用</string>
+    <string name="hint_can_compensate_fee">可补偿</string>
+    <string name="hint_actual_compensate_fee">实际补偿</string>
+    <string name="hint_signed_resident_client_fund">签约居民端</string>
+    <string name="hint_family_accumulation">家庭累计：</string>
+    <string name="hint_individual_accumulation">个人累计：</string>
+
+    <string name="hint_input_username">请输入用户名</string>
+    <string name="hint_input_password">请输入密码</string>
+    
+    <string name="hint_input_name_or_id_card_number">请输入姓名/身份证号</string>
+
+    <string name="hint_input_chat_msg">请输入将要发送的消息</string>
+
+    <string name="remember_password">记住密码</string>
+
+    <string name="button_title_login">登录</string>
+    <string name="button_title_qianyue">签约完成</string>
+    <string name="institution_info">机构信息</string>
+
+    <string name="please_select_date">请选择日期</string>
+    <string name="please_select_time">请选择时间</string>
+    <string name="please_select_start_date">请选择起始日期</string>
+    <string name="please_select_end_date">请选择结束日期</string>
+    <string name="please_select_start_time">请选择起始时间</string>
+    <string name="please_select_end_time">请选择结束时间</string>
+
+    <string name="modify_password">修改密码</string>
+    <string name="modify_profile">修改个人信息</string>
+
+    <string name="take_photo">拍照</string>
+    <string name="hint_register">点击上面的“注册”按钮，即表示你同意《签约软件许可协议》和《签约隐私政策》</string>
+
+    <string name="search_hint">请输入关键字</string>
+
+    <string name="drop_down_list_header_default_text">点击可以刷新</string>
+    <string name="drop_down_list_header_pull_text">下拉可以刷新</string>
+    <string name="drop_down_list_header_release_text">松开可以刷新</string>
+    <string name="drop_down_list_header_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_default_text">更多</string>
+    <string name="drop_down_list_footer_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多了</string>
+
+    <string name="input_hint">发送消息</string>
+    <string name="message_click_hint">消息被点击</string>
+    <string name="message_long_click_hint">消息被长按</string>
+    <string name="avatar_click_hint">头像被点击</string>
+
+    <!-- Request permission start -->
+    <string name="rationale_record_voice">此应用需要麦克风权限以便录音</string>
+    <string name="rationale_photo">此应用需要访问图片权限</string>
+    <string name="rationale_camera">此应用需要访问摄像头权限</string>
+    <!-- Request permission end -->
+    <string name="siged_sever_class">电子处方</string>
+    <string name="hint_no_wenjuan_assess_info_please_click_to_reload">暂无智能引导信息,点我刷新</string>
+    <string name="hint_load_failure">加载失败,点我刷新</string>
+    <string name="hint_list_empty_please_reload">暂无数据,点我刷新</string>
+    <string name="hint_no_notification_info_please_click_to_reload">暂无通知公告信息,点我刷新</string>
+    <string name="hint_load_notification_info_error_please_click_to_reload">加载通知公告信息失败,点我重试</string>
+    <string name="hint_no_family_member_info_please_click_to_reload">暂无家庭成员信息,点我刷新</string>
+    <string name="hint_load_family_member_info_error_please_click_to_reload">加载家庭成员信息失败,点我重试</string>
+    <string name="hint_no_policy_info_please_click_to_reload">暂无政策信息,点我刷新</string>
+    <string name="hint_no_advice_info_please_click_to_reload">无搜索信息,点我刷新</string>
+    <string name="hint_no_reception_info_please_click_to_reload">暂无受理中心信息,点我刷新</string>
+    <string name="hint_load_policy_info_error_please_click_to_reload">加载政策信息失败,点我重试</string>
+    <string name="hint_load_advice_info_error_please_click_to_reload">加载咨询建议信息失败,点我重试</string>
+    <string name="hint_no_person_location_info_please_click_to_reload">暂无居民信息,点我刷新</string>
+    <string name="hint_load_person_location_info_error_please_click_to_reload">加载居民信息失败,点我重试</string>
+    <string name="hint_no_remind_info_please_click_to_reload">暂无提醒信息,点我刷新</string>
+    <string name="hint_load_remind_info_error_please_click_to_reload">加载提醒信息失败,点我重试</string>
+    <string name="hint_no_sign_application_info_please_click_to_reload">暂无签约申请信息,点我刷新</string>
+    <string name="hint_no_service_assess_info_please_click_to_reload">暂无我的发现信息,点我刷新</string>
+    <string name="hint_no_find_info_please_click_to_reload">暂无待办发现信息,点我刷新</string>
+    <string name="hint_no_appointment_execution_info_please_click_to_reload">暂无预约执行信息,点我刷新</string>
+    <string name="hint_no_signed_resident_directory_please_click_to_reload">暂无签约居民通讯录信息,点我刷新</string>
+    <string name="hint_no_town_level_directory_please_click_to_reload">暂无乡镇级医疗机构通讯录,点我刷新</string>
+    <string name="hint_no_village_level_directory_please_click_to_reload">暂无村级医疗机构通讯录,点我刷新</string>
+    <string name="hint_no_doctor_level_directory_please_click_to_reload">暂无医疗人员通讯录,点我刷新</string>
+    <string name="hint_no_latest_7_days_need_execution_projects_please_click_to_reload">暂无近7天需要执行项目,点我刷新</string>
+    <string name="hint_no_timeout_not_execution_projects_please_click_to_reload">暂无超时未执行项目,点我刷新</string>
+    <string name="hint_no_consultation">暂无相关信息</string>
+    <string name="siged_sever_name">服务包详情</string>
+
+    <string name="intelligent_honour_agreement_remind">智能履约提醒</string>
+    <string name="my_sign_number">我的签约人数：%1$s人</string>
+    <string name="latest_7_days_need_execute_projects_number">近7天需要执行项目数</string>
+    <string name="per_person_and_times">%1$s人次</string>
+    <string name="timeout_not_execute_projects_number">超时未执行项目数</string>
+    <string name="service_assess">服务评价</string>
+    <string name="sign_application">签约申请</string>
+    <string name="appointment_execution">预约执行</string>
+    <string name="new_service_assess_info_number">您有%1$s条新服务评价信息</string>
+    <string name="new_sign_application_info_number">您有%1$s条新签约申请信息</string>
+
+    <string name="town_level_medical_institution_administration_number">管辖%1$s个村级医疗机构</string>
+    <string name="village_level_medical_institution_administration_number">%1$s名医疗人员</string>
+    <string name="directory_title">通讯录(%1$s)</string>
+    <string name="clinic_annual_sign_info_overview">%1$s%2$s年度签约信息一览</string>
+    <string name="total_paid_sign_number">总有偿签约人数：%1$s人</string>
+    <string name="specific_sign_number">%1$s签约人数：%2$s人</string>
+    <string name="sign_ratio">签约率：%1$s</string>
+
+    <string name="sign_number">签约人数：%1$s人</string>
+    <string name="sign_service_total_income">签约服务总收入</string>
+    <string name="sign_service_actual_receive_money">实收金额</string>
+    <string name="sign_service_self_paid_money">自付金额</string>
+    <string name="sign_service_compensate_money_of_medical_insurance">医保补偿金额</string>
+    <string name="sign_service_reduction_and_exemption_money">减免金额</string>
+
+    <string-array name="messages_array">
+        <!--<item>How are you</item>-->
+        <!--<item>Fine. And you?</item>-->
+        <!--<item>Me, too. Is there any news today?</item>-->
+        <!--<item>Yep! I got a news here： boom! Tomorrow is the end of The Walking Dead!</item>-->
+        <!--<item>Are you kidding me?</item>-->
+        <!--<item>Absolutely not!</item>-->
+        <!--<item>Jesus, that\'s crazy</item>-->
+        <!--<item>I thought no one would gonna to make it</item>-->
+        <!--<item>That\'s cruel, I don\'t like it, maybe there is a favourable turn</item>-->
+        <!--<item>Hope so</item>-->
+    </string-array>
+
+    <string name="image_content">Image</string>
+
+    <string name="detail_bottom_share">分享</string>
+    <string name="detail_bottom_like">点赞</string>
+    <string name="detail_bottom_commit">评论</string>
+    <string name="comment_expand">收起</string>
+
+    <string name="actionbar_webview_share">分享到</string>
+    <string name="actionbar_webview_cope">复制链接</string>
+    <string name="actionbar_webview_open">打开链接</string>
+    <string name="action_share">分享</string>
+
+    <string name="about_addr">https：//github.com/laotan7237/EasyReader</string>//项目地址
+    <string name="about_author">作者：老坛</string>
+    <string name="github_issues">您好，您有什么好的意见可以及时向我反馈，您可以在GitHub的Issues处说明问题原因，也可以通过以下方式联系我，我将根据情况尽量处理哦 ~</string>
+    <string name="about_project">项目简介：\n易读,一个纯粹的阅读App\n该项目会持续迭代与优化,加入更丰富的内容与功能,并不断尝试最新的技术,欢迎star、fork、issue\n点击下面的项目链接给个star吧,您的star就是对我最大的支持。</string>
+    <string name="amount_receivable">应收金额总计：</string>
+    <string name="amount_shishou">实收金额总计：</string>
+    <string name="amount_jianmian">减免金额总计：</string>
+    <string name="amount_compensation">医保补偿金额总计：</string>
+    <string name="amount_personal">自付金额总计：</string>
+    <string name="amount_status">收费状态：</string>
+
+
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="scanning">scanning for devices...</string>
+
+    <string name="hint_list_empty_reservation_apply">暂无申请中信息,点我刷新</string>
+    <string name="hint_list_empty_reservation_server">暂无已服务信息,点我刷新</string>
+    <string name="hint_list_empty_pend_execu">暂无待执行项目信息,点我刷新</string>
+    <string name="hint_list_empty_had_execu">暂无已执行项目信息,点我刷新</string>
+    <string name="hint_list_empty_inhospital">暂无签约信息,点我刷新</string>
+    <string name="hint_list_empty_pend_reserva">暂无待预约项目信息,点我刷新</string>
+    <string name="hint_list_empty_had_reserva">暂无已预约项目信息,点我刷新</string>
+    <string name="hint_list_empty_cancel_reserva">暂无已取消项目信息,点我刷新</string>
+    <string name="shehuijiuzhuobject">社会救助对象</string>
+    <string name="youfuobject">优抚对象</string>
+    <string name="laolingku">老龄库</string>
+    <string name="liushouchild">留守(困境)儿童库</string>
+
+
+    <string name="large_text">
+        "张三家庭贫困"
+        "家里没有稳定的劳动力，"
+        "家里住的是危房"
+        "********************"
+        "*******************"
+        "*******************”"
+        "*******************"
+        "*******************"
+        "*******************。"
+    </string>
+
+
+    <string name="login_page_setting_immediately">设置</string>
+    <string name="hint_no_dibao_info_please_click_to_reload">暂无城市低保信息,点我刷新</string>
+    <string name="hint_load_dibao_info_error_please_click_to_reload">加载城市低保信息失败,点我重试</string>
+    <string name="hint_load_file_info_error_please_click_to_reload">加载附件信息失败，点我重试</string>
+    <string name="hint_load_file_info_entity_click_to_reload">暂无附件信息，点我刷新</string>
+    <string name="hint_no_fujian_info_please_click_to_reload">暂无附件信息,点我刷新</string>
+    <string name="hint_load_fujian_info_error_please_click_to_reload">加载附件信息失败,点我重试</string>
+    <string name="hint_load_diaocha_error_please_click_to_reload">加载调查信息失败，点我重试</string>
+    <string name="hint_load_diaocha_empty_please_click_to_reload">暂无调查信息，点我刷新</string>
+    <string name="hint_load_pingyi_error_please_click_to_reload">加载评议信息失败，点我重试</string>
+    <string name="hint_load_pingyi_empty_please_click_to_reload">暂无评议信息，点我刷新</string>
+    <string name="hint_load_xq_error_please_click_to_reload">加载详情信息失败，点我重试</string>
+    <string name="hint_load_xqi_empty_please_click_to_reload">暂无详情信息，点我刷新</string>
+    <string name="hint_load_xqi_empty_please_click_to_reloadx">暂无数据</string>
+    <string name="current_password">原密码</string>
+    <string name="password_hint">区分大小写</string>
+    <string name="new_password">新密码</string>
+    <string name="original_password">原密码不能为空</string>
+    <string name="new_password_not_null">新密码不能为空</string>
+    <string name="confirm_password_not_null">确认密码不能为空</string>
+    <string name="original_password_mistake">原密码填写错误</string>
+    <string name="passwords_invalid">密码必须为6-16位字符，区分大小写</string>
+    <string name="passwords_do_not_match">填写的确认密码与新密码不一致</string>
+    <string name="new_and_old_password">新旧密码一致</string>
+
+    <string name="hint_no_family_info_please_click_to_reload">暂无家庭成员信息,点我刷新</string>
+    <string name="hint_load_family_info_error_please_click_to_reload">加载家庭成员信息失败,点我重试</string>
+
+    <string name="hint_no_tekun_info_please_click_to_reload">暂无特困人员供养信息,点我刷新</string>
+    <string name="hint_load_tekun_info_error_please_click_to_reload">加载城乡特困人员供养信息失败,点我重试</string>
+
+    <string name="hint_no_yiliao_info_please_click_to_reload">暂无农村低保信息,点我刷新</string>
+    <string name="hint_load_yiliao_info_error_please_click_to_reload">加载农村低保信息失败,点我重试</string>
+
+    <string name="hint_no_linshi_info_please_click_to_reload">暂无其他救助信息,点我刷新</string>
+    <string name="hint_load_linshi_info_error_please_click_to_reload">加载其他救助信息失败,点我重试</string>
+
+    <string name="hint_no_souzai_info_please_click_to_reload">暂无受灾救助信息,点我刷新</string>
+    <string name="hint_load_souzai_info_error_please_click_to_reload">加载受灾救助信息失败,点我重试</string>
+    <string name="hint_no_mymsg_info_please_click_to_reload">暂无我的消息,点我刷新</string>
+    <string name="hint_load_mymsg_info_error_please_click_to_reload">加载我的消息失败,点我重试</string>
+
+    <string name="consignee_text">收货人 : </string>
+    <string name="consignee_text_hint">收货人姓名</string>
+    <string name="consignee_tel_hint">收货人手机号</string>
+    <string name="consignee_detail_hint">请输入详细街道地址</string>
+    <string name="phone_text">手机号 : </string>
+    <string name="address_text">省市区 : </string>
+    <string name="detail_address">详细地址 : </string>
+    <string name="recevie_address">收货地址 : </string>
+    <string name="selset_birthday">请选择</string>
+    <string name="select_address_pop_title">所在地区</string>
+</resources>

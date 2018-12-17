@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:minHeight="40dip" >
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/id_treenode_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/tree_econpand" />
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_marginLeft="10dip"
+
+        android:id="@+id/id_treenode_name"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:text=""
+        android:textSize="18sp" />
+    <CheckBox
+        android:gravity="right"
+       android:layout_marginRight="10dip"
+        android:id="@+id/id_treeNode_check"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/id_treenode_name"
+
+
+        android:background="@drawable/check_box_bg"
+        android:button="@null"
+        android:focusable="false"
+        />
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</LinearLayout>
+
+
+</LinearLayout>

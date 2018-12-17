@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="normal_image_id" format="reference"/>
+    <attr name="hilight_image_id" format="reference" />
+    <attr name="normal_text_color" format="color|reference"/>
+    <attr name="hilight_text_color" format="color|reference" />
+    <attr name="text_string" format="string|reference"/>
+
+    <declare-styleable name="ImageTextHorizontalLayout">
+        <attr name="normal_image_id"/>
+        <attr name="text_string" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageTextLayout">
+        <attr name="normal_image_id"/>
+        <attr name="hilight_image_id"/>
+        <attr name="normal_text_color"/>
+        <attr name="hilight_text_color"/>
+        <attr name="text_string" />
+    </declare-styleable>
+    <declare-styleable name="NecessityNameOptionsLayout">
+        <attr name="is_compulsory"/>
+        <attr name="name_text"/>
+        <attr name="is_name_visible"/>
+        <attr name="is_single_select"/>
+    </declare-styleable>
+    <declare-styleable name="TextLayout">
+        <attr name="normal_background_color"/>
+        <attr name="hilight_background_color"/>
+        <attr name="normal_text_color"/>
+        <attr name="hilight_text_color"/>
+        <attr name="text_string" />
+        <attr name="is_single_select"/>
+    </declare-styleable>
+    <attr name="donut_backgroundColor" format="color"/>
+    <attr name="donut_backgroundDonutColor" format="color"/>
+    <attr name="donut_percentageDonutColor" format="color"/>
+    <attr name="donut_text_color" format="color"/>
+    <attr name="donut_percentage" format="float" />
+    <attr name="donut_value" format="string"/>
+    <attr name="donut_hint" format="string"/>
+    <attr name="donut_value_text_size" format="dimension"/>
+    <attr name="donut_hint_text_size" format="dimension"/>
+    <attr name="donut_percentage_text_size" format="dimension"/>
+    <attr name="donut_width" format="dimension"/>
+
+    <declare-styleable name="SegmentControl">
+        <attr name="cornerRadius" format="dimension|reference"/>
+        <attr name="normalColor" format="color|reference" />
+        <attr name="selectedColor" format="color|reference" />
+        <attr name="backgroundColors" format="color|reference"/>
+        <attr name="textColors" format="color|reference"/>
+        <attr name="texts" format="string|reference"/>
+        <attr name="android:textSize"/>
+        <attr name="android:orientation" />
+        <!-- 外部边框的width -->
+        <attr name="boundWidth" format="dimension|reference"/>
+        <!-- 内部边框的width -->
+        <attr name="separatorWidth" format="dimension|reference"/>
+        <attr name="gaps" format="dimension|reference"/>
+        <attr name="horizonGap" format="dimension|reference"/>
+        <attr name="verticalGap" format="dimension|reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="DonutPercentageView">
+        <attr name="donut_backgroundColor"/>
+        <attr name="donut_backgroundDonutColor"/>
+        <attr name="donut_percentageDonutColor"/>
+        <attr name="donut_text_color"/>
+        <attr name="donut_percentage"/>
+        <attr name="donut_value"/>
+        <attr name="donut_hint"/>
+        <attr name="donut_value_text_size"/>
+        <attr name="donut_hint_text_size"/>
+        <attr name="donut_percentage_text_size"/>
+        <attr name="donut_width"/>
+    </declare-styleable>
+
+    <attr name="donut_division_backgroundColor" format="color"/>
+    <attr name="donut_division_backgroundDonutColor" format="color"/>
+    <attr name="donut_division_text_color" format="color"/>
+    <attr name="donut_division_value" format="string"/>
+    <attr name="donut_division_hint" format="string"/>
+    <attr name="donut_division_value_text_size" format="dimension"/>
+    <attr name="donut_division_hint_text_size" format="dimension"/>
+    <attr name="donut_division_width" format="dimension"/>
+
+    <declare-styleable name="DonutDivisionPercentageView">
+        <attr name="donut_division_backgroundColor"/>
+        <attr name="donut_division_backgroundDonutColor"/>
+        <attr name="donut_division_text_color"/>
+        <attr name="donut_division_value"/>
+        <attr name="donut_division_hint"/>
+        <attr name="donut_division_value_text_size"/>
+        <attr name="donut_division_hint_text_size"/>
+        <attr name="donut_division_width"/>
+    </declare-styleable>
+
+
+
+    <attr name="donut_progress_backgroundColor" format="color"/>
+    <attr name="donut_progress_backgroundDonutColor" format="color"/>
+    <attr name="donut_progress_percentageDonutColor" format="color"/>
+    <attr name="donut_progress_percentage" format="float"/>
+    <attr name="donut_progress_width" format="dimension"/>
+    <declare-styleable name="DonutProgressView">
+        <attr name="donut_progress_backgroundColor"/>
+        <attr name="donut_progress_backgroundDonutColor"/>
+        <attr name="donut_progress_percentageDonutColor"/>
+        <attr name="donut_progress_percentage"/>
+        <attr name="donut_progress_width"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="drop_down_list_attr">
+        <attr name="isDropDownStyle" format="boolean" />
+        <attr name="isOnBottomStyle" format="boolean" />
+        <attr name="isAutoLoadOnBottom" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TabButton">
+        <attr name="normal_bg_res" format="reference" />
+        <attr name="selected_bg_res" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PagePointView">
+        <attr name="ppv_focusPointColor" format="color"/>
+        <attr name="ppv_unfocusPointColor" format="color"/>
+        <attr name="ppv_pointCount" format="integer"/>
+        <attr name="ppv_hasBorder" format="boolean"/>
+        <attr name="ppv_borderWidth" format="dimension" />
+        <attr name="ppv_pointRadius" format="dimension"/>
+
+    </declare-styleable>
+    <attr name="is_compulsory" format="boolean|reference"/>
+    <attr name="name_text" format="string|reference"/>
+    <attr name="is_name_visible" format="boolean|reference"/>
+    <attr name="edit_text_placeholder" format="string|reference"/>
+    <attr name="is_input_editable" format="boolean|reference"/>
+    <attr name="is_input_underline_visible" format="boolean|reference"/>
+    <attr name="trailing_icon" format="reference"/>
+    <attr name="is_trailing_icon_visible" format="boolean|reference"/>
+    <attr name="is_single_select" format="boolean|reference"/>
+    <attr name="name_right_text" format="string|reference"/>
+
+    <attr name="normal_background_color" format="reference"/>
+    <attr name="hilight_background_color" format="reference" />
+
+
+
+
+
+
+
+    <declare-styleable name="HbInputLayout">
+        <attr name="is_compulsory"/>
+        <attr name="name_text"/>
+        <attr name="name_right_text"/>
+        <attr name="is_name_visible"/>
+        <attr name="edit_text_placeholder"/>
+        <attr name="is_input_editable"/>
+        <attr name="is_input_underline_visible"/>
+        <attr name="trailing_icon"/>
+        <attr name="is_trailing_icon_visible"/>
+    </declare-styleable>
+
+    <declare-styleable name="NecessityNameInputLayout">
+        <attr name="is_compulsory"/>
+        <attr name="name_text"/>
+        <attr name="is_name_visible"/>
+        <attr name="edit_text_placeholder"/>
+        <attr name="is_input_editable"/>
+        <attr name="is_input_underline_visible"/>
+        <attr name="trailing_icon"/>
+        <attr name="is_trailing_icon_visible"/>
+    </declare-styleable>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <declare-styleable name="PreviewBorderView">
+        <attr name="tipText" format="string"/>
+        <attr name="tipTextColor" format="color|reference"/>
+        <attr name="tipTextSize" format="dimension"/>
+    </declare-styleable>
+</resources>

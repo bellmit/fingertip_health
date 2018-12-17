@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--
+
+-->
+    <LinearLayout
+        android:id="@+id/ctx_famailyadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+         >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:background="@color/colorHomeLine"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/tv_address_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="地址"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/baseadd"
+                android:layout_toRightOf="@+id/tv_address_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/title_color"
+                android:text=""
+                android:textSize="15sp"
+                android:maxLines="2"
+                android:minLines="2"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp3"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/ll_xy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/located"
+                    android:layout_below="@+id/baseadd"
+                    android:layout_toRightOf="@+id/tv_address_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:textColor="@color/subtitle_color"
+                    android:text=""
+               />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_locate"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/list_item_round_corner_blue_background"
+                android:text="定位"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:background="@drawable/list_item_round_corner_blue_background"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_margin="@dimen/margin_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="农合列表"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_normal" />
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/img_width_18dp"
+            android:layout_height="@dimen/img_height_18dp"
+            android:src="@mipmap/icon_close"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/white_background_with_color_theme_border_with_round_corner">
+        <ImageView
+            android:layout_width="@dimen/img_width_18dp"
+            android:layout_height="@dimen/img_height_18dp"
+            android:src="@mipmap/search_black"
+            android:scaleType="fitXY"/>
+
+        <EditText
+            android:digits="1234567890xX"
+            android:id="@+id/et_keyword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="@dimen/txt_size_14"
+            android:imeOptions="actionSearch"
+            android:hint="输入农合证号或身份证号进行检索"/>
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/color_theme_background_corner_radius"
+            android:paddingLeft="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_4"
+            android:text="搜索"
+            android:textSize="@dimen/txt_size_normal"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/margin_normal"
+        >
+
+        <include
+            android:id="@+id/lay_content"
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <include
+            android:id="@+id/lay_patient_list_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

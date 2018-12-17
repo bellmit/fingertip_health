@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/ll_idcard"
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_weight="4"
+            android:text="乡镇社区"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+
+        <TextView
+            android:id="@+id/tv_xiangzhen"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_weight="6"
+            android:gravity="right"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="我的电话"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_myphone"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="发现地址"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+           android:id="@+id/tv_myadress"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="情况说明"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        style="@style/ll_bg_mid_layout"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:text="图片信息"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/txt_size_14" />
+        <TextView
+           android:visibility="gone"
+            android:layout_marginRight="12dip"
+            android:gravity="right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_weight="6"
+            android:text="******************"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/txt_size_14" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/framelayout">
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="10dip"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never" />
+
+    <include
+        android:id="@+id/lay_inhospital_load_failure"
+        layout="@layout/layout_load_list_result_empty_new_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

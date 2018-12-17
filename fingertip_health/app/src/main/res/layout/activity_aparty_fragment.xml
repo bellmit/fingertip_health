@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jqsoft.fingertip_health.di.ui.onlinesignfragment.APartyFragment">
+
+
+   <!-- <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="@dimen/img_width_large"
+        android:layout_height="@dimen/img_height_large"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="15dp"
+        android:background="@mipmap/i_next"
+        android:text="dada" />-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/leba_bg_single_unselected"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:gravity="right"
+                        android:text="家庭医生"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/acet_family_doctor_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_border_gray_background"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:text="ewqeqeqwee"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:gravity="right"
+                        android:text="签约时间"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                       android:id="@+id/signtime_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_border_gray_background"
+                        android:gravity="center_vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/acet_sign_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:lines="1"
+                            android:clickable="false"
+                            android:singleLine="true"
+                            android:textColor="#191616"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_sign_time"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_select_date" />
+
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:gravity="right"
+                        android:text="签约年份"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_border_gray_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/acet_sign_year"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:textColor="#191616"
+                            android:textSize="14sp"
+                            android:clickable="false"/>
+
+                        <ImageView
+                            android:id="@+id/iv_sign_year"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_down" />
+
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:gravity="right"
+                        android:text="服务周期"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_weight="1"
+                            android:background="@drawable/gray_border_gray_background">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/acet_service_cycle_start"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:textColor="#191616"
+                                android:textSize="14sp"
+                                android:clickable="false"/>
+
+                            <ImageView
+                                android:id="@+id/iv_service_cycle_start"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/i_select_date" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:gravity="right"
+                        android:text="至"
+                        android:textColor="#191616"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_border_gray_background">
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/acet_service_cycle_end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:textColor="#191616"
+                            android:textSize="14sp"
+                            android:clickable="false"/>
+
+                        <ImageView
+                            android:id="@+id/iv_service_cycle_end"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/i_select_date" />
+
+
+                    </LinearLayout>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="@dimen/img_width_80dp"
+        android:layout_height="@dimen/img_height_80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/i_doctor" />
+</FrameLayout>

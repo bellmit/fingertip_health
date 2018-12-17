@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/menu_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/ll_toobar"
+        layout="@layout/fragment_all_new_handle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dip"
+        android:id="@+id/ll_jiuzhu"
+        android:background="@color/menu_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip"
+        android:layout_below="@+id/ll_toobar"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_marginLeft="10dip"
+            android:layout_gravity="center"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="救助申请"
+                android:textColor="@color/subtitle_color"
+                android:textSize="@dimen/txt_size_14" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:background="#fff"
+        android:id="@+id/ll_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nine_size_40"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_jiuzhu"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+
+            android:id="@+id/ll_dibao"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_dibao" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_find"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="城乡低保"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:background="#F6F5FA"
+            android:layout_width="1.5dip"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_tekun"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_tekun" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_rescue"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="特困人员供养"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/ll_one"
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dip"
+        android:background="#F6F5FA" />
+
+
+    <LinearLayout
+        android:background="#fff"
+        android:id="@+id/ll_two"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nine_size_40"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_yiliao"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_yiliao"
+
+                />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_prevent_rediuction"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="医疗救助"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="#F6F5FA"
+            android:layout_width="1.5dip"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_lishi"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_linshi" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_social_governance"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="临时救助"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/ll_two"
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dip"
+        android:background="#F6F5FA" />
+
+
+    <LinearLayout
+
+        android:background="#fff"
+
+        android:layout_below="@+id/view3"
+        android:id="@+id/ll_tree"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nine_size_40"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_souzai"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_souzai" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_social_servece"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="受灾救助"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:background="#F6F5FA"
+            android:layout_width="1.5dip"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:src="@mipmap/icon_guofang" />
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_national_defence"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/handle_txt_size_16"
+                    android:text="国防与军队改革"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_below="@+id/ll_tree"
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dip"
+        android:background="#F6F5FA" />
+
+    <LinearLayout
+
+        android:layout_marginTop="10dip"
+        android:background="@color/menu_background_color"
+        android:id="@+id/ll_setting"
+        android:layout_below="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip">
+
+        <LinearLayout
+            android:layout_marginLeft="10dip"
+            android:layout_gravity="center"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="调查、评议"
+                android:textColor="@color/subtitle_color"
+                android:textSize="@dimen/txt_size_14" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_below="@+id/ll_setting"
+        android:background="#fff"
+        android:id="@+id/ll_four"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nine_size_40"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:id="@+id/ll_ruhu"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+
+                android:layout_marginLeft="10dip"
+
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_ruhu" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_ruhu"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="入户调查"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:background="#F6F5FA"
+            android:layout_width="1.5dip"
+            android:layout_height="match_parent" />
+
+         <LinearLayout
+            android:id="@+id/ll_minzhu"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="@dimen/nine_size_40"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="10dip"
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:src="@mipmap/icon_minzhu" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_minzu"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/txt_size_15"
+                    android:text="民主评议"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+

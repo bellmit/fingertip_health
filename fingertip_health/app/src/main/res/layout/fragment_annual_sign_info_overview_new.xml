@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_4"
+        >
+
+        <TextView
+            android:id="@+id/tv_medical_institution_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_0"
+            android:layout_marginBottom="@dimen/dp_0"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_normal" />
+        <TextView
+            android:id="@+id/tv_annual_sign_info_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_0"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_normal"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/ll_chart_container"
+            android:layout_width="@dimen/sign_info_chart_container_width"
+            android:layout_height="@dimen/sign_info_chart_container_height"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <!--<signed_resident_clientnt.view.DonutPercentageView-->
+            <!--android:id="@+id/dpv_fee_sign"-->
+            <!--android:layout_width="@dimen/donut_percentage_view_width"-->
+            <!--android:layout_height="@dimen/donut_percentage_view_height"-->
+            <!--app:donut_backgroundColor="@color/colorTheme"-->
+            <!--app:donut_backgroundDonutColor="@color/white"-->
+            <!--app:donut_hint="有偿签约"-->
+            <!--app:donut_hint_text_size="14sp"-->
+            <!--app:donut_percentage="0.6"-->
+            <!--app:donut_percentageDonutColor="@color/yellow"-->
+            <!--app:donut_percentage_text_size="12sp"-->
+            <!--app:donut_text_color="@color/white"-->
+            <!--app:donut_value="500"-->
+            <!--app:donut_value_text_size="16sp"-->
+            <!--app:donut_width="10dp" />-->
+
+        <TextView
+            android:id="@+id/tv_total_fee_sign_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_normal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_sign_ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_normal"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_arrow_left"
+        android:layout_width="@dimen/img_width_normal"
+        android:layout_height="@dimen/img_height_normal"
+        android:src="@mipmap/arrow_left"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/iv_arrow_right"
+        android:layout_width="@dimen/img_width_normal"
+        android:layout_height="@dimen/img_height_normal"
+        android:src="@mipmap/arrow_right"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+</RelativeLayout>

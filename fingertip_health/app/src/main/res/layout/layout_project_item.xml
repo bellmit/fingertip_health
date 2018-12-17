@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/dash_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/execution_project_sub_color"
+            android:textSize="@dimen/txt_size_small" />
+
+        <TextView
+            android:id="@+id/tv_next_execution_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/dp_2"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="right"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/execution_project_sub_color"
+            android:textSize="@dimen/txt_size_small" />
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/btn_execute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:background="@drawable/color_theme_border_4_radius_white_background"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:text="@string/hint_execute"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/txt_size_small"
+            android:visibility="gone"
+            app:gTouchColor="@color/red_400"
+            app:gTouchCornerRadius="@dimen/corner_radius_6px"
+            app:gTouchDurationRate="0.7"
+            app:gTouchEffect="auto" />
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_large"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top"
+        >
+
+
+    <ImageView
+        android:id="@+id/iv_necessity"
+        android:layout_width="@dimen/img_width_necessity"
+        android:layout_height="@dimen/img_height_necessity"
+        android:scaleType="fitXY"
+        android:src="@mipmap/i_star_outline"
+        android:layout_marginTop="@dimen/margin_normal"/>
+    
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/necessity_name_input_min_width"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/txt_size_archive"
+        android:textColor="@color/archive_title_color"
+        android:layout_marginLeft="@dimen/dp_6"
+        />
+        <!--android:minWidth="@dimen/necessity_name_input_min_width"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/txt_size_archive"
+                android:textColor="@color/archive_title_color"/>
+
+            <ImageView
+                android:id="@+id/iv_trailing_icon"
+                android:layout_width="@dimen/img_trailing_icon_width"
+                android:layout_height="@dimen/img_trailing_icon_height"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:src="@mipmap/i_select_date"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_underline"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_1px"
+            android:background="@color/archive_input_underline_color"/>
+    </LinearLayout>
+</LinearLayout>

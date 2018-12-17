@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/paketype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/margin_10dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:gravity="center"
+            android:text="基础"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/pakename"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLength="18"
+            android:text="老年终极包"
+            android:textColor="#191616"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/pakecount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+       <Button
+           android:id="@+id/btn_jia"
+           android:layout_width="25dp"
+           android:layout_height="25dp"
+           android:background="@mipmap/add_btn_bg"/>
+       <TextView
+           android:id="@+id/text_num"
+           android:layout_width="wrap_content"
+           android:text="1"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_jian"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/add_btn_bg_00"/>
+        <Button
+            android:id="@+id/pakedet"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/detpake"
+            android:focusable="false"
+            android:visibility="gone"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_my_info_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_dz"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                    android:background="@null"
+                    android:inputType="text"
+                    android:id="@+id/ip"
+                    android:hint="请输入服务器地址"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:lines="1"
+                    android:maxLength="16"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColor="#80000000"
+                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12"
+                        android:text="格式为192.168.44.134"
+                        android:textColor="@color/black_alpha_112"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_port"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                    android:background="@null"
+
+                    android:inputType="number"
+                    android:id="@+id/d_ip"
+                    android:hint="请输入端口"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:lines="1"
+                    android:maxLength="16"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColor="#80000000"
+                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12"
+                        android:text="格式为8080"
+                        android:textColor="@color/black_alpha_112"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_remarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/address"
+                    android:hint="备注(最多15个字)"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:lines="1"
+                    android:maxLength="16"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColor="#80000000"
+                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12"
+                        android:text="格式为 安徽省民政厅"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <com.flyco.roundview.RoundTextView
+
+        android:id="@+id/btn_save"
+        android:layout_gravity="center|bottom"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/checkbox_execu_height_20dp"
+        android:layout_marginTop="@dimen/checkbox_execu_height_20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@android:color/white"
+        app:rv_backgroundColor="#067eee"
+        app:rv_cornerRadius="6dp" />
+
+</LinearLayout>

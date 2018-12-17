@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_normal">
+
+    <ImageView
+        android:id="@+id/iv_doctor"
+        android:layout_width="@dimen/img_width_large"
+        android:layout_height="@dimen/img_height_large"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@mipmap/icon"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_department_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_small"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/gray"
+            android:textSize="@dimen/txt_size_normal" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/img_width_small"
+        android:layout_height="@dimen/img_height_small"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@mipmap/next_black"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <include
+        layout="@layout/activity_policy_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/qus_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_marginLeft="@dimen/dp_10"
+            android:id="@+id/im_Question"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_question"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+        <TextView
+            android:id="@+id/qus_typename"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/im_Question"
+            android:layout_centerVertical="true"
+            android:text="常见问题"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_toLeftOf="@+id/ic_right"
+            android:layout_centerVertical="true"
+            android:text="更多问题"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/ic_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+
+    </RelativeLayout>
+    <View
+        android:background="@color/separator_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lay_content"
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#e8e8e8" />
+
+    <RelativeLayout
+        android:visibility="gone"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/im_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_add" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/im_add"
+            android:text="更多关注" />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+
+        android:background="@color/separator_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <!--<View-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@color/separator_color"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"/>-->
+    <LinearLayout
+        android:visibility="gone"
+
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+        <View
+            android:background="@color/separator_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:id="@+id/rl_qustype"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/im_off"
+                    android:src="@mipmap/icon_question_qita"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_qustype"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/im_off"
+                    android:text="业务办理"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <View
+                android:background="@color/separator_color"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            <RelativeLayout
+                android:id="@+id/rl_qustype1"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/im_qus"
+                    android:src="@mipmap/icon_question_yewu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_qustype1"
+
+                    android:layout_below="@+id/im_qus"
+                    android:layout_centerHorizontal="true"
+                    android:text="订单问题"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:background="@color/separator_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <RelativeLayout
+                android:id="@+id/rl_qustype2"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/im_find"
+                    android:src="@mipmap/icon_question_jcfx"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_qustype2"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/im_find"
+                    android:text="主动发现"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <View
+                android:background="@color/separator_color"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+            <RelativeLayout
+                android:id="@+id/rl_qustype3"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/im_others"
+                    android:src="@mipmap/icon_question_zhudong"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_qustype3"
+
+                    android:layout_below="@+id/im_others"
+                    android:layout_centerHorizontal="true"
+                    android:text="其它问题"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout></LinearLayout>

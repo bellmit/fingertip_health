@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_setting_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/lightblue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mine_name_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    android:id="@+id/whether_enable_push_text_view"
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/hint_whether_enable_push" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_push_enable_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/hint_allowed_push_time" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/hint_allowed_push_start_time" />
+
+                <TextView
+                    android:id="@+id/tv_allowed_push_start_time"
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/hint_allowed_push_end_time" />
+
+                <TextView
+                    android:id="@+id/tv_allowed_push_end_time"
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/hint_push_silence_time" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/hint_push_silence_start_time" />
+
+                <TextView
+                    android:id="@+id/tv_push_silence_start_time"
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+
+                <TextView
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/hint_push_silence_end_time" />
+
+                <TextView
+                    android:id="@+id/tv_push_silence_end_time"
+                    style="@style/TextAppearanceNormal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

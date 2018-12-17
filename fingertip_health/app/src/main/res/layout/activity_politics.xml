@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <include
+        layout="@layout/activity_policy_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/bannerview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@mipmap/r_index_page_banner">
+
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+        <LinearLayout
+            android:background="@drawable/textview_round_half_border"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="28dp">
+        <TextView
+            android:id="@+id/bannerTitle"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="民政"
+            android:textSize="@dimen/txt_size_16"
+            android:ellipsize="end"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="@dimen/dp_10"
+            android:id="@+id/ll_lin2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/list_size"
+                android:textColor="@color/black_alpha_112"
+                android:layout_gravity="center"
+                android:text="共有0个服务项"
+                android:textSize="@dimen/txt_size_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/colorLineItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        />
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lay_content"
+            layout="@layout/layout_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <include
+            android:id="@+id/lay_policy_load_failure"
+            layout="@layout/layout_load_list_result_empty_placeholder_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
